@@ -14,6 +14,8 @@ using Metin2Helper.Service;
 using Metin2Helper.Views;
 using static Guna.UI2.WinForms.Suite.Descriptions;
 using M2Helper.Views;
+using System.Runtime.Intrinsics.X86;
+using System.Text.RegularExpressions;
 
 namespace M2Helper
 {
@@ -78,12 +80,13 @@ namespace M2Helper
         }
         private async void FillRazadorDGVAndGetCurrentEvent()
         {
-            DataTable dataTable = new DataTable();
+            DataTable razadorRecords = new DataTable();
             applicationStartLoadingScreen.BringToFront();
             applicationStartLoadingScreen.Visible = true;
-            dataTable = await killedRazadorService.ReadKilledRazadorRecords();
+            razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
             GetCurrentEvent();
-            killedRazadorsDGV.DataSource = dataTable;
+            GetTodaysRecords(razadorRecords);
+            killedRazadorsDGV.DataSource = razadorRecords;
             killedRazadorsDGV.Columns[0].HeaderText = "Id";
             killedRazadorsDGV.Columns[1].HeaderText = "Time Spent";
             killedRazadorsDGV.Columns[2].HeaderText = "When Killed";
@@ -110,12 +113,65 @@ namespace M2Helper
             applicationStartLoadingScreen.Visible = false;
         }
 
+        private void GetTodaysRecords(DataTable razadorRecords)
+        {
+            
+            //Today's Records
+            int totalChestCount = 0;
+            DataTable todaysRecords = new DataTable();
+
+            todaysRecords.Columns.Add("Id", typeof(int));
+            todaysRecords.Columns.Add("TimeSpentBySecond", typeof(int));
+            todaysRecords.Columns.Add("WhenKilled", typeof(DateTime));
+            todaysRecords.Columns.Add("ChestCount", typeof(int));
+            DateTime today = DateTime.Now;
+            foreach (DataRow record in razadorRecords.Rows)
+            {
+                if (today.Day == ((DateTime)record["WhenKilled"]).Day &&
+                    today.Month == ((DateTime)record["WhenKilled"]).Month &&
+                    today.Year == ((DateTime)record["WhenKilled"]).Year)
+                {
+                    todaysRecords.Rows.Add(record["Id"], record["TimeSpentBySecond"], record["WhenKilled"], record["ChestCount"]);
+                }
+            }
+            if (todaysRecords.Rows.Count > 0)
+            {
+                foreach (DataRow recordsOfToday in todaysRecords.Rows)
+                {
+                    totalChestCount += (int)recordsOfToday["ChestCount"];
+                }
+                double avg = (double)totalChestCount / todaysRecords.Rows.Count;
+                string formattedAvg = avg.ToString("F2");
+                todaysRecordsLabel.Text = $"Today's Records : {todaysRecords.Rows.Count} Entrance," +
+                $" {totalChestCount} Chests, {formattedAvg} AVG";
+            }
+            else if (todaysRecords.Rows.Count == 0)
+            {
+                todaysRecordsLabel.Text = "Today's Records : 0 Entrance, 0 Chests, 0 AVG";
+            }
+
+            //All Time Records
+            int totalChestCountOfAllTime = 0;
+            if (razadorRecords.Rows.Count > 0)
+            {
+                foreach (DataRow dataRow in razadorRecords.Rows)
+                {
+                    totalChestCountOfAllTime += (int)dataRow["ChestCount"];
+                }
+                Console.WriteLine(totalChestCount.ToString());
+                double avgOfAll = (double)totalChestCountOfAllTime / razadorRecords.Rows.Count;
+                string formattedAvgOfAllTime = avgOfAll.ToString("F2");
+                allTimeRecordsLabel.Text = $"All Time Records : {razadorRecords.Rows.Count} Entrance, {totalChestCountOfAllTime} Chests, {formattedAvgOfAllTime} AVG";
+            }
+        }
+
         private async void RefreshRazadorDGV()
         {
             DataTable dataTable = new DataTable();
             razadorDgvLoadingLabel.Visible = true;
             dataTable = await killedRazadorService.ReadKilledRazadorRecords();
             killedRazadorsDGV.DataSource = dataTable;
+            GetTodaysRecords(dataTable);
             razadorDgvLoadingLabel.Visible = false;
         }
 

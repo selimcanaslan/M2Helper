@@ -92,6 +92,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -200,15 +208,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:M2Helper"
-        "ProductCode" = "8:{B1F5051F-1BA5-4AA7-AD84-C4AEAF852317}"
-        "PackageCode" = "8:{1CD16821-9C05-4003-A262-16CB3D7B022F}"
+        "ProductCode" = "8:{9A27B92F-90BC-4A09-9568-BB1610B4696F}"
+        "PackageCode" = "8:{7CEAAA00-54D7-4C07-BF32-2A318C8F76DC}"
         "UpgradeCode" = "8:{0C46C6FF-96DF-46A4-BF6D-A30E42659413}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:SCAWorks"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

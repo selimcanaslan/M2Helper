@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,20 +44,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             draggableTopPanel = new Panel();
+            minimizeButton = new Guna.UI2.WinForms.Guna2Button();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             windowTitle = new Label();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             topPanelDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             windowTitleDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             containerPanel = new Panel();
+            razadorDgvLoadingLabel = new Label();
             eventPanel = new Panel();
             currentEventLabel = new Label();
-            razadorDgvLoadingLabel = new Label();
             killedRazadorsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1 = new Panel();
+            allTimeRecordsLabel = new Label();
             todaysRecordsLabel = new Label();
             razadorLatestTimeLabel = new Label();
             razadorCurrentTimeLabel = new Label();
@@ -67,7 +69,6 @@
             label2 = new Label();
             loadingLabel = new Label();
             RazadorTimer = new System.Windows.Forms.Timer(components);
-            minimizeButton = new Guna.UI2.WinForms.Guna2Button();
             draggableTopPanel.SuspendLayout();
             containerPanel.SuspendLayout();
             eventPanel.SuspendLayout();
@@ -89,6 +90,24 @@
             draggableTopPanel.Name = "draggableTopPanel";
             draggableTopPanel.Size = new Size(931, 40);
             draggableTopPanel.TabIndex = 1;
+            // 
+            // minimizeButton
+            // 
+            minimizeButton.CustomizableEdges = customizableEdges1;
+            minimizeButton.DisabledState.BorderColor = Color.DarkGray;
+            minimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            minimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            minimizeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            minimizeButton.FillColor = Color.FromArgb(77, 77, 77);
+            minimizeButton.Font = new Font("Segoe UI", 9F);
+            minimizeButton.ForeColor = Color.White;
+            minimizeButton.Location = new Point(720, 5);
+            minimizeButton.Name = "minimizeButton";
+            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            minimizeButton.Size = new Size(82, 29);
+            minimizeButton.TabIndex = 2;
+            minimizeButton.Text = "minimize";
+            minimizeButton.Click += minimizeButton_Click;
             // 
             // guna2ControlBox2
             // 
@@ -142,8 +161,8 @@
             // containerPanel
             // 
             containerPanel.BackColor = Color.FromArgb(77, 77, 77);
-            containerPanel.Controls.Add(eventPanel);
             containerPanel.Controls.Add(razadorDgvLoadingLabel);
+            containerPanel.Controls.Add(eventPanel);
             containerPanel.Controls.Add(killedRazadorsDGV);
             containerPanel.Controls.Add(panel1);
             containerPanel.Controls.Add(applicationStartLoadingScreen);
@@ -153,6 +172,19 @@
             containerPanel.Name = "containerPanel";
             containerPanel.Size = new Size(931, 420);
             containerPanel.TabIndex = 2;
+            // 
+            // razadorDgvLoadingLabel
+            // 
+            razadorDgvLoadingLabel.BackColor = Color.FromArgb(77, 77, 77);
+            razadorDgvLoadingLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorDgvLoadingLabel.ForeColor = Color.White;
+            razadorDgvLoadingLabel.Location = new Point(122, 266);
+            razadorDgvLoadingLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorDgvLoadingLabel.Name = "razadorDgvLoadingLabel";
+            razadorDgvLoadingLabel.Size = new Size(121, 24);
+            razadorDgvLoadingLabel.TabIndex = 1;
+            razadorDgvLoadingLabel.Text = "Fetching Data...";
+            razadorDgvLoadingLabel.Visible = false;
             // 
             // eventPanel
             // 
@@ -172,19 +204,6 @@
             currentEventLabel.Size = new Size(99, 17);
             currentEventLabel.TabIndex = 0;
             currentEventLabel.Text = "Current Event :";
-            // 
-            // razadorDgvLoadingLabel
-            // 
-            razadorDgvLoadingLabel.BackColor = SystemColors.AppWorkspace;
-            razadorDgvLoadingLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            razadorDgvLoadingLabel.ForeColor = Color.Black;
-            razadorDgvLoadingLabel.Location = new Point(107, 282);
-            razadorDgvLoadingLabel.Margin = new Padding(4, 0, 4, 0);
-            razadorDgvLoadingLabel.Name = "razadorDgvLoadingLabel";
-            razadorDgvLoadingLabel.Size = new Size(150, 24);
-            razadorDgvLoadingLabel.TabIndex = 1;
-            razadorDgvLoadingLabel.Text = "Fetching Data...";
-            razadorDgvLoadingLabel.Visible = false;
             // 
             // killedRazadorsDGV
             // 
@@ -251,6 +270,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(allTimeRecordsLabel);
             panel1.Controls.Add(todaysRecordsLabel);
             panel1.Controls.Add(razadorLatestTimeLabel);
             panel1.Controls.Add(razadorCurrentTimeLabel);
@@ -264,12 +284,24 @@
             panel1.Size = new Size(374, 157);
             panel1.TabIndex = 4;
             // 
+            // allTimeRecordsLabel
+            // 
+            allTimeRecordsLabel.AutoSize = true;
+            allTimeRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            allTimeRecordsLabel.ForeColor = Color.White;
+            allTimeRecordsLabel.Location = new Point(4, 131);
+            allTimeRecordsLabel.Margin = new Padding(4, 0, 4, 0);
+            allTimeRecordsLabel.Name = "allTimeRecordsLabel";
+            allTimeRecordsLabel.Size = new Size(298, 19);
+            allTimeRecordsLabel.TabIndex = 7;
+            allTimeRecordsLabel.Text = "All Time Records : 0 Entrance, 0 Chests, 0 AVG";
+            // 
             // todaysRecordsLabel
             // 
             todaysRecordsLabel.AutoSize = true;
             todaysRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             todaysRecordsLabel.ForeColor = Color.White;
-            todaysRecordsLabel.Location = new Point(4, 114);
+            todaysRecordsLabel.Location = new Point(4, 108);
             todaysRecordsLabel.Margin = new Padding(4, 0, 4, 0);
             todaysRecordsLabel.Name = "todaysRecordsLabel";
             todaysRecordsLabel.Size = new Size(292, 19);
@@ -281,7 +313,7 @@
             razadorLatestTimeLabel.AutoSize = true;
             razadorLatestTimeLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             razadorLatestTimeLabel.ForeColor = Color.White;
-            razadorLatestTimeLabel.Location = new Point(4, 90);
+            razadorLatestTimeLabel.Location = new Point(4, 86);
             razadorLatestTimeLabel.Margin = new Padding(4, 0, 4, 0);
             razadorLatestTimeLabel.Name = "razadorLatestTimeLabel";
             razadorLatestTimeLabel.Size = new Size(151, 19);
@@ -397,23 +429,6 @@
             loadingLabel.TabIndex = 0;
             loadingLabel.Text = "Loading...";
             // 
-            // minimizeButton
-            // 
-            minimizeButton.CustomizableEdges = customizableEdges1;
-            minimizeButton.DisabledState.BorderColor = Color.DarkGray;
-            minimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            minimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            minimizeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            minimizeButton.Font = new Font("Segoe UI", 9F);
-            minimizeButton.ForeColor = Color.White;
-            minimizeButton.Location = new Point(712, 7);
-            minimizeButton.Name = "minimizeButton";
-            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            minimizeButton.Size = new Size(82, 29);
-            minimizeButton.TabIndex = 2;
-            minimizeButton.Text = "minimize";
-            minimizeButton.Click += minimizeButton_Click;
-            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -466,6 +481,7 @@
         private Label loadingLabel;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button minimizeButton;
+        private Label allTimeRecordsLabel;
     }
 }
 

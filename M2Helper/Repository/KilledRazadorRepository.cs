@@ -32,7 +32,7 @@ namespace M2Helper.Repository
 
             dataTable.Columns.Add("Id", typeof(int));
             dataTable.Columns.Add("TimeSpentBySecond", typeof(int));
-            dataTable.Columns.Add("WhenKilled", typeof(string));
+            dataTable.Columns.Add("WhenKilled", typeof(DateTime));
             dataTable.Columns.Add("ChestCount", typeof(int));
 
             using (var context = new ApplicationDbContext())
@@ -41,7 +41,7 @@ namespace M2Helper.Repository
 
                 foreach (var record in records)
                 {
-                    dataTable.Rows.Add(record.Id, record.Time_spent_by_second, record.When_killed.ToString("dd MMMM dddd HH:mm"), record.Chest_Count);
+                    dataTable.Rows.Add(record.Id, record.Time_spent_by_second, record.When_killed, record.Chest_Count);
                 }
             }
 

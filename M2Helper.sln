@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M2Helper", "M2Helper\M2Helper.csproj", "{5C0A66CA-3311-4539-AD0F-F6D7C85CD158}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{3B2F37B2-FC92-46EC-B3DD-0555F3D43027}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C0A66CA-3311-4539-AD0F-F6D7C85CD158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0A66CA-3311-4539-AD0F-F6D7C85CD158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0A66CA-3311-4539-AD0F-F6D7C85CD158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0A66CA-3311-4539-AD0F-F6D7C85CD158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2F37B2-FC92-46EC-B3DD-0555F3D43027}.Debug|Any CPU.ActiveCfg = Debug
+		{3B2F37B2-FC92-46EC-B3DD-0555F3D43027}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4452C487-EB88-4D5F-B835-3393B658C3FC}
+	EndGlobalSection
+EndGlobal

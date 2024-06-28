@@ -29,23 +29,58 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinimizedMainWindow));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(components);
-            m2HelperLogo = new Guna.UI2.WinForms.Guna2ImageButton();
-            label1 = new Label();
-            label2 = new Label();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            cooldownLabel = new Label();
+            m2HelperLogo = new Guna.UI2.WinForms.Guna2ImageButton();
+            label2 = new Label();
+            label1 = new Label();
+            guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            RazadorCooldownTimer = new System.Windows.Forms.Timer(components);
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2DragControl2
             // 
             guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl2.DragEndTransparencyValue = 0.9D;
             guna2DragControl2.TargetControl = guna2CustomGradientPanel1;
             guna2DragControl2.UseTransparentDrag = true;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.Controls.Add(cooldownLabel);
+            guna2CustomGradientPanel1.Controls.Add(m2HelperLogo);
+            guna2CustomGradientPanel1.Controls.Add(label2);
+            guna2CustomGradientPanel1.Controls.Add(label1);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
+            guna2CustomGradientPanel1.Dock = DockStyle.Fill;
+            guna2CustomGradientPanel1.FillColor = Color.Orange;
+            guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(255, 128, 0);
+            guna2CustomGradientPanel1.FillColor3 = Color.DimGray;
+            guna2CustomGradientPanel1.FillColor4 = Color.DarkRed;
+            guna2CustomGradientPanel1.Location = new Point(1, 1);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2CustomGradientPanel1.Size = new Size(149, 129);
+            guna2CustomGradientPanel1.TabIndex = 3;
+            // 
+            // cooldownLabel
+            // 
+            cooldownLabel.AutoSize = true;
+            cooldownLabel.BackColor = Color.Transparent;
+            cooldownLabel.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cooldownLabel.ForeColor = Color.White;
+            cooldownLabel.Location = new Point(3, 99);
+            cooldownLabel.Name = "cooldownLabel";
+            cooldownLabel.Size = new Size(0, 20);
+            cooldownLabel.TabIndex = 3;
             // 
             // m2HelperLogo
             // 
@@ -55,52 +90,61 @@
             m2HelperLogo.Image = (Image)resources.GetObject("m2HelperLogo.Image");
             m2HelperLogo.ImageOffset = new Point(0, 0);
             m2HelperLogo.ImageRotate = 0F;
-            m2HelperLogo.Location = new Point(35, 38);
+            m2HelperLogo.ImageSize = new Size(32, 32);
+            m2HelperLogo.Location = new Point(103, 0);
             m2HelperLogo.Name = "m2HelperLogo";
             m2HelperLogo.PressedState.ImageSize = new Size(64, 64);
-            m2HelperLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            m2HelperLogo.Size = new Size(71, 61);
+            m2HelperLogo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            m2HelperLogo.Size = new Size(43, 38);
             m2HelperLogo.TabIndex = 0;
             m2HelperLogo.Click += m2HelperLogo_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(38, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Click Image";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(26, 103);
+            label2.Location = new Point(3, 15);
             label2.Name = "label2";
             label2.Size = new Size(103, 15);
             label2.TabIndex = 2;
             label2.Text = "to open m2Helper";
             // 
-            // guna2CustomGradientPanel1
+            // label1
             // 
-            guna2CustomGradientPanel1.Controls.Add(m2HelperLogo);
-            guna2CustomGradientPanel1.Controls.Add(label2);
-            guna2CustomGradientPanel1.Controls.Add(label1);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel1.Dock = DockStyle.Fill;
-            guna2CustomGradientPanel1.FillColor = Color.Orange;
-            guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(255, 128, 0);
-            guna2CustomGradientPanel1.FillColor3 = Color.DimGray;
-            guna2CustomGradientPanel1.FillColor4 = Color.DarkRed;
-            guna2CustomGradientPanel1.Location = new Point(1, 1);
-            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2CustomGradientPanel1.Size = new Size(149, 129);
-            guna2CustomGradientPanel1.TabIndex = 3;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(69, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Click Image";
+            // 
+            // guna2DragControl3
+            // 
+            guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl3.DragEndTransparencyValue = 0.9D;
+            guna2DragControl3.TargetControl = label1;
+            guna2DragControl3.UseTransparentDrag = true;
+            // 
+            // guna2DragControl4
+            // 
+            guna2DragControl4.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl4.DragEndTransparencyValue = 0.9D;
+            guna2DragControl4.TargetControl = label2;
+            guna2DragControl4.UseTransparentDrag = true;
+            // 
+            // RazadorCooldownTimer
+            // 
+            RazadorCooldownTimer.Interval = 1000;
+            // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.DragEndTransparencyValue = 0.9D;
+            guna2DragControl1.TargetControl = cooldownLabel;
+            guna2DragControl1.UseTransparentDrag = true;
             // 
             // MinimizedMainWindow
             // 
@@ -127,5 +171,10 @@
         private Label label1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl4;
+        private Label cooldownLabel;
+        private System.Windows.Forms.Timer RazadorCooldownTimer;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

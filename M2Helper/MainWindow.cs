@@ -16,6 +16,8 @@ using static Guna.UI2.WinForms.Suite.Descriptions;
 using M2Helper.Views;
 using System.Runtime.Intrinsics.X86;
 using System.Text.RegularExpressions;
+using System.Media;
+using M2Helper.Properties;
 
 namespace M2Helper
 {
@@ -24,10 +26,17 @@ namespace M2Helper
         private KilledRazadorService killedRazadorService;
         private SaleService saleService;
         private WeeklyEventService weeklyEventService;
-        private int currentRazadorSessionTime = 0;
+        private RazadorCooldownService razadorCooldownService;
         private int latestRazadorTimeSpent = 0;
         private bool isTimerStarted = false;
         private string lastEvent = string.Empty;
+        private SoundPlayer loginSound = new SoundPlayer(Resources.event_notification);
+        private SoundPlayer exitSound = new SoundPlayer(Resources.exit_notification);
+        private SoundPlayer razadorCoolDownFinishedSound = new SoundPlayer(Resources.razador_notification);
+
+        public static bool isCooldownTimerStarted = false;
+        public static double currentRazadorCooldownTimeInSeconds;
+        public static int currentRazadorSessionTime = 0;
         public static bool isLatestRazadorSessionSubmitted;
         public static bool isLatestDeleteActionDoneSuccesfully;
         public MainWindow()
@@ -35,8 +44,8 @@ namespace M2Helper
             killedRazadorService = new KilledRazadorService();
             saleService = new SaleService();
             weeklyEventService = new WeeklyEventService();
+            razadorCooldownService = new RazadorCooldownService();
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -45,6 +54,19 @@ namespace M2Helper
 
             GetEverything();
 
+        }
+
+        private void PlayLoginSound()
+        {
+            loginSound.Play();
+        }
+        private void PlayExitSound()
+        {
+            exitSound.Play();
+        }
+        private void PlayRazadorSound()
+        {
+            razadorCoolDownFinishedSound.Play();
         }
 
         private void GetEverything()
@@ -85,6 +107,7 @@ namespace M2Helper
             applicationStartLoadingScreen.Visible = true;
             razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
             GetCurrentEvent();
+            GetRazadorCooldownIfExist();
             GetTodaysRecords(razadorRecords);
             killedRazadorsDGV.DataSource = razadorRecords;
             killedRazadorsDGV.Columns[0].HeaderText = "Id";
@@ -109,13 +132,90 @@ namespace M2Helper
             }
             killedRazadorsDGV.Columns[killedRazadorsDGV.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             killedRazadorsDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-
+            PlayLoginSound();
             applicationStartLoadingScreen.Visible = false;
+        }
+
+        private async void GetRazadorCooldownIfExist()
+        {
+            DataTable cooldown = new DataTable();
+            cooldown = await razadorCooldownService.GetNextRazadorDate();
+            if (cooldown.Rows.Count > 0)
+            {
+                DateTime now = DateTime.Now;
+                DateTime nextRazadorTime = (DateTime)cooldown.Rows[0]["next_razador_time"];
+                TimeSpan difference = nextRazadorTime - now;
+                double differenceInSeconds = difference.TotalSeconds;
+                if (differenceInSeconds > 0)
+                {
+                    currentRazadorCooldownTimeInSeconds = differenceInSeconds;
+                    Console.WriteLine($"{(int)differenceInSeconds / 60}' {(int)differenceInSeconds % 60}''");
+                    if (isCooldownTimerStarted)
+                    {
+                        RazadorCooldownTimer.Stop();
+                        isCooldownTimerStarted = false;
+                        RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
+
+                        isCooldownTimerStarted = true;
+                        RazadorCooldownTimer.Interval = 1000;
+                        RazadorCooldownTimer.Tick += RazadorCooldownTimer_Tick;
+                        RazadorCooldownTimer.Start();
+                    }
+                    else
+                    {
+                        isCooldownTimerStarted = true;
+                        RazadorCooldownTimer.Interval = 1000;
+                        RazadorCooldownTimer.Tick += RazadorCooldownTimer_Tick;
+                        RazadorCooldownTimer.Start();
+                    }
+                }
+                else
+                {
+                    razadorCooldownLabel.Text = "You are good to go for new session !";
+                    razadorCooldownLabel.ForeColor = Color.Green;
+                }
+            }
+            else
+            {
+                Console.WriteLine("There is no cooldown record yet!");
+            }
+        }
+        private void RazadorCooldownTimer_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine(currentRazadorCooldownTimeInSeconds);
+            currentRazadorCooldownTimeInSeconds -= 1;
+            if (currentRazadorCooldownTimeInSeconds <= 0)
+            {
+                RazadorCooldownTimer.Stop();
+                isCooldownTimerStarted = false;
+                RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
+                razadorCooldownLabel.Text = "You are good to go for new session !";
+                razadorCooldownLabel.ForeColor = Color.Green;
+                PlayRazadorSound();
+            }
+            if (currentRazadorCooldownTimeInSeconds > 0)
+            {
+                if (currentRazadorCooldownTimeInSeconds > 1200)
+                {
+                    razadorCooldownLabel.Text = $"{(int)currentRazadorCooldownTimeInSeconds / 60}' {(int)currentRazadorCooldownTimeInSeconds % 60}'' cooldown left!";
+                    razadorCooldownLabel.ForeColor = Color.Green;
+                }
+                else if (currentRazadorCooldownTimeInSeconds > 600 && currentRazadorCooldownTimeInSeconds < 1200)
+                {
+                    razadorCooldownLabel.Text = $"{(int)currentRazadorCooldownTimeInSeconds / 60}' {(int)currentRazadorCooldownTimeInSeconds % 60}'' cooldown left!";
+                    razadorCooldownLabel.ForeColor = Color.Orange;
+                }
+                else
+                {
+                    razadorCooldownLabel.Text = $"{(int)currentRazadorCooldownTimeInSeconds / 60}' {(int)currentRazadorCooldownTimeInSeconds % 60}'' cooldown left!";
+                    razadorCooldownLabel.ForeColor = Color.Red;
+                }
+            }
         }
 
         private void GetTodaysRecords(DataTable razadorRecords)
         {
-            
+
             //Today's Records
             int totalChestCount = 0;
             DataTable todaysRecords = new DataTable();
@@ -203,11 +303,11 @@ namespace M2Helper
             int second = time % 60;
             if (minute < 1)
             {
-                textToReturn = $"{second}'";
+                textToReturn = $"{second}''";
             }
             else
             {
-                textToReturn = $"{minute}'' {second}'";
+                textToReturn = $"{minute}' {second}''";
             }
             return textToReturn;
         }
@@ -216,11 +316,13 @@ namespace M2Helper
         {
             RazadorTimer.Stop();
             isTimerStarted = false;
+            RazadorTimer.Tick -= RazadorTimer_Tick;
             razadorCurrentTimeLabel.Text = "Current Session Time : 0";
             latestRazadorTimeSpent = currentRazadorSessionTime;
             currentRazadorSessionTime = 0;
-            RazadorTimer.Tick -= RazadorTimer_Tick;
             SubmitSession(latestRazadorTimeSpent);
+            razadorCooldownService.UpdateNextRazadorTimeAsync(1);
+            GetRazadorCooldownIfExist();
         }
 
         private void SubmitSession(int latestTimeSpentOnRazador)
@@ -262,6 +364,12 @@ namespace M2Helper
             this.Hide();
             minimizedMainWindow.Closed += (s, args) => this.Show();
             minimizedMainWindow.Show();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            PlayExitSound();
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

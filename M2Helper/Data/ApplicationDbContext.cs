@@ -14,6 +14,7 @@ namespace M2Helper.Data
         public DbSet<KilledRazador> KilledRazadors { get; set; }
         public DbSet<Sale> Sales { get; set; }
         public DbSet<WeeklyEvent> WeeklyEvents { get; set; }
+        public DbSet<RazadorCooldown> RazadorCooldowns { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,6 +26,7 @@ namespace M2Helper.Data
             modelBuilder.Entity<KilledRazador>().ToTable("Killed_Razador_List");
             modelBuilder.Entity<Sale>().ToTable("Sales");
             modelBuilder.Entity<WeeklyEvent>().ToTable("weekly_events");
+            modelBuilder.Entity<RazadorCooldown>().ToTable("Razador_Cooldown");
 
             modelBuilder.Entity<WeeklyEvent>()
                 .HasKey(e => e.event_id)

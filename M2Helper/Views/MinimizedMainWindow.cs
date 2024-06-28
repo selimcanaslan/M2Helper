@@ -13,11 +13,37 @@ namespace M2Helper.Views
 {
     public partial class MinimizedMainWindow : Form
     {
+        private double currentRazadorCooldownTime;
         public MinimizedMainWindow()
         {
             InitializeComponent();
+            currentRazadorCooldownTime = MainWindow.currentRazadorCooldownTimeInSeconds;
+            ShowCooldownIfExist();
         }
 
+        private void ShowCooldownIfExist()
+        {
+            if (MainWindow.isCooldownTimerStarted)
+            {
+                RazadorCooldownTimer.Interval = 1000;
+                RazadorCooldownTimer.Tick += RazadorCooldownTimer_Tick;
+                RazadorCooldownTimer.Start();
+            }
+        }
+        private void RazadorCooldownTimer_Tick(object sender, EventArgs e)
+        {
+            currentRazadorCooldownTime -= 1;
+            if (currentRazadorCooldownTime <= 0)
+            {
+                RazadorCooldownTimer.Stop();
+                RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
+                cooldownLabel.Text = "No Cooldown For Razador!";
+            }
+            if (currentRazadorCooldownTime > 0)
+            {
+                cooldownLabel.Text = $"{(int)currentRazadorCooldownTime / 60}' {(int)currentRazadorCooldownTime % 60}'' To Razador!";
+            }
+        }
         private void m2HelperLogo_Click(object sender, EventArgs e)
         {
             this.Close();

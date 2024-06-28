@@ -52,11 +52,11 @@
             topPanelDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             windowTitleDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             containerPanel = new Panel();
-            razadorDgvLoadingLabel = new Label();
             eventPanel = new Panel();
             currentEventLabel = new Label();
             killedRazadorsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1 = new Panel();
+            razadorCooldownLabel = new Label();
             allTimeRecordsLabel = new Label();
             todaysRecordsLabel = new Label();
             razadorLatestTimeLabel = new Label();
@@ -66,9 +66,11 @@
             stopRazadorSessionButton = new Guna.UI2.WinForms.Guna2Button();
             startRazadorSessionButton = new Guna.UI2.WinForms.Guna2Button();
             applicationStartLoadingScreen = new Panel();
+            razadorDgvLoadingLabel = new Label();
             label2 = new Label();
             loadingLabel = new Label();
             RazadorTimer = new System.Windows.Forms.Timer(components);
+            RazadorCooldownTimer = new System.Windows.Forms.Timer(components);
             draggableTopPanel.SuspendLayout();
             containerPanel.SuspendLayout();
             eventPanel.SuspendLayout();
@@ -161,7 +163,6 @@
             // containerPanel
             // 
             containerPanel.BackColor = Color.FromArgb(77, 77, 77);
-            containerPanel.Controls.Add(razadorDgvLoadingLabel);
             containerPanel.Controls.Add(eventPanel);
             containerPanel.Controls.Add(killedRazadorsDGV);
             containerPanel.Controls.Add(panel1);
@@ -172,19 +173,6 @@
             containerPanel.Name = "containerPanel";
             containerPanel.Size = new Size(931, 420);
             containerPanel.TabIndex = 2;
-            // 
-            // razadorDgvLoadingLabel
-            // 
-            razadorDgvLoadingLabel.BackColor = Color.FromArgb(77, 77, 77);
-            razadorDgvLoadingLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            razadorDgvLoadingLabel.ForeColor = Color.White;
-            razadorDgvLoadingLabel.Location = new Point(122, 266);
-            razadorDgvLoadingLabel.Margin = new Padding(4, 0, 4, 0);
-            razadorDgvLoadingLabel.Name = "razadorDgvLoadingLabel";
-            razadorDgvLoadingLabel.Size = new Size(121, 24);
-            razadorDgvLoadingLabel.TabIndex = 1;
-            razadorDgvLoadingLabel.Text = "Fetching Data...";
-            razadorDgvLoadingLabel.Visible = false;
             // 
             // eventPanel
             // 
@@ -234,7 +222,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             killedRazadorsDGV.GridColor = Color.FromArgb(231, 229, 255);
-            killedRazadorsDGV.Location = new Point(7, 170);
+            killedRazadorsDGV.Location = new Point(7, 199);
             killedRazadorsDGV.Margin = new Padding(4, 3, 4, 3);
             killedRazadorsDGV.MultiSelect = false;
             killedRazadorsDGV.Name = "killedRazadorsDGV";
@@ -242,7 +230,7 @@
             killedRazadorsDGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             killedRazadorsDGV.RowHeadersVisible = false;
             killedRazadorsDGV.RowTemplate.Height = 22;
-            killedRazadorsDGV.Size = new Size(374, 210);
+            killedRazadorsDGV.Size = new Size(374, 181);
             killedRazadorsDGV.TabIndex = 5;
             killedRazadorsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             killedRazadorsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -270,6 +258,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(razadorCooldownLabel);
             panel1.Controls.Add(allTimeRecordsLabel);
             panel1.Controls.Add(todaysRecordsLabel);
             panel1.Controls.Add(razadorLatestTimeLabel);
@@ -281,8 +270,19 @@
             panel1.Location = new Point(7, 7);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(374, 157);
+            panel1.Size = new Size(374, 186);
             panel1.TabIndex = 4;
+            // 
+            // razadorCooldownLabel
+            // 
+            razadorCooldownLabel.AutoSize = true;
+            razadorCooldownLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorCooldownLabel.ForeColor = Color.White;
+            razadorCooldownLabel.Location = new Point(4, 153);
+            razadorCooldownLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorCooldownLabel.Name = "razadorCooldownLabel";
+            razadorCooldownLabel.Size = new Size(0, 19);
+            razadorCooldownLabel.TabIndex = 8;
             // 
             // allTimeRecordsLabel
             // 
@@ -402,6 +402,7 @@
             // applicationStartLoadingScreen
             // 
             applicationStartLoadingScreen.BackColor = Color.Orange;
+            applicationStartLoadingScreen.Controls.Add(razadorDgvLoadingLabel);
             applicationStartLoadingScreen.Controls.Add(label2);
             applicationStartLoadingScreen.Controls.Add(loadingLabel);
             applicationStartLoadingScreen.Dock = DockStyle.Fill;
@@ -409,6 +410,19 @@
             applicationStartLoadingScreen.Name = "applicationStartLoadingScreen";
             applicationStartLoadingScreen.Size = new Size(931, 420);
             applicationStartLoadingScreen.TabIndex = 7;
+            // 
+            // razadorDgvLoadingLabel
+            // 
+            razadorDgvLoadingLabel.BackColor = Color.FromArgb(77, 77, 77);
+            razadorDgvLoadingLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorDgvLoadingLabel.ForeColor = Color.White;
+            razadorDgvLoadingLabel.Location = new Point(123, 291);
+            razadorDgvLoadingLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorDgvLoadingLabel.Name = "razadorDgvLoadingLabel";
+            razadorDgvLoadingLabel.Size = new Size(121, 24);
+            razadorDgvLoadingLabel.TabIndex = 1;
+            razadorDgvLoadingLabel.Text = "Fetching Data...";
+            razadorDgvLoadingLabel.Visible = false;
             // 
             // label2
             // 
@@ -429,6 +443,10 @@
             loadingLabel.TabIndex = 0;
             loadingLabel.Text = "Loading...";
             // 
+            // RazadorCooldownTimer
+            // 
+            RazadorCooldownTimer.Interval = 1000;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -443,6 +461,7 @@
             Padding = new Padding(1);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Metin2Helper";
+            FormClosing += MainWindow_FormClosing;
             Load += Form1_Load;
             draggableTopPanel.ResumeLayout(false);
             containerPanel.ResumeLayout(false);
@@ -482,6 +501,8 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button minimizeButton;
         private Label allTimeRecordsLabel;
+        private Label razadorCooldownLabel;
+        private System.Windows.Forms.Timer RazadorCooldownTimer;
     }
 }
 

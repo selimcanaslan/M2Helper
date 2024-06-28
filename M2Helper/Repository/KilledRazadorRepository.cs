@@ -23,7 +23,6 @@ namespace M2Helper.Repository
                 await context.SaveChangesAsync();
             }
 
-            MessageBox.Show("Killed Razador record added successfully!");
         }
 
         public async Task<DataTable> ReadKilledRazadorRecords()
@@ -58,7 +57,6 @@ namespace M2Helper.Repository
                 {
                     context.KilledRazadors.Remove(recordToDelete);
                     context.SaveChanges();
-                    MessageBox.Show("Killed Razador record deleted successfully!");
                 }
                 else
                 {

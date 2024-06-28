@@ -124,7 +124,7 @@
   <data name="m2HelperLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAUnZJREFUeF7tvQ2wbWlZ39l97z339sft25BubiM2HRvsoqUVhoCMBMWEmplkKAVr
+        DAAACwwBP0AiyAAAUnZJREFUeF7tvQ2wbWlZ39l97z339sft25BubiM2HRvsoqUVhoCMBMWEmplkKAVr
         HKFwoEaMThk7iSJq1FxCQD4CbahRQTvlUJnhsyyTiQHGqcGQMsQIaT/CUEOIyUwBVnTIYDGEKClrInfW
         b/X57f6f575r77X32efce85536p/rb3XXuv9eNbz/z/P+661976ul1566aWXXnrppZdeeumll1566aWX
         XnrppZdeeumll1566aWXXnrppZdeeumll1566aWXXnrppZdeeumll1566aWXXnrppZdeeumll1566aWX
@@ -479,4 +479,16 @@
         d93/D9C3+rp95NHIAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="guna2DragControl3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>491, 17</value>
+  </metadata>
+  <metadata name="guna2DragControl4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>649, 17</value>
+  </metadata>
+  <metadata name="RazadorCooldownTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>807, 17</value>
+  </metadata>
+  <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>988, 17</value>
+  </metadata>
 </root>

@@ -29,22 +29,33 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             draggableTopPanel = new Panel();
+            pictureBox1 = new PictureBox();
             minimizeButton = new Guna.UI2.WinForms.Guna2Button();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             windowTitle = new Label();
@@ -55,33 +66,46 @@
             eventPanel = new Panel();
             currentEventLabel = new Label();
             killedRazadorsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            panel1 = new Panel();
-            razadorCooldownLabel = new Label();
-            allTimeRecordsLabel = new Label();
-            todaysRecordsLabel = new Label();
-            razadorLatestTimeLabel = new Label();
+            razadorSessionManagerPanel = new Panel();
+            removeRazadorCooldownButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             razadorCurrentTimeLabel = new Label();
-            label1 = new Label();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             stopRazadorSessionButton = new Guna.UI2.WinForms.Guna2Button();
             startRazadorSessionButton = new Guna.UI2.WinForms.Guna2Button();
+            dotIcon = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            razadorCooldownLabel = new Label();
+            allTimeRecordsLabel = new Label();
+            razadorLatestTimeLabel = new Label();
+            razadorSessionManagerTextLabel = new Label();
+            todaysRecordsLabel = new Label();
             applicationStartLoadingScreen = new Panel();
-            razadorDgvLoadingLabel = new Label();
-            label2 = new Label();
+            m2HelperLabel = new Label();
             loadingLabel = new Label();
             RazadorTimer = new System.Windows.Forms.Timer(components);
             RazadorCooldownTimer = new System.Windows.Forms.Timer(components);
+            EventChangeControlTimer = new System.Windows.Forms.Timer(components);
+            eventNotifyIcon = new NotifyIcon(components);
             draggableTopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             containerPanel.SuspendLayout();
             eventPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)killedRazadorsDGV).BeginInit();
-            panel1.SuspendLayout();
+            razadorSessionManagerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dotIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             applicationStartLoadingScreen.SuspendLayout();
             SuspendLayout();
             // 
             // draggableTopPanel
             // 
             draggableTopPanel.BackColor = Color.FromArgb(46, 46, 46);
+            draggableTopPanel.Controls.Add(pictureBox1);
             draggableTopPanel.Controls.Add(minimizeButton);
             draggableTopPanel.Controls.Add(guna2ControlBox2);
             draggableTopPanel.Controls.Add(windowTitle);
@@ -93,9 +117,19 @@
             draggableTopPanel.Size = new Size(931, 40);
             draggableTopPanel.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.metin2logopng;
+            pictureBox1.Location = new Point(4, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(33, 31);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // minimizeButton
             // 
-            minimizeButton.CustomizableEdges = customizableEdges1;
+            minimizeButton.CustomizableEdges = customizableEdges23;
             minimizeButton.DisabledState.BorderColor = Color.DarkGray;
             minimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             minimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -105,7 +139,7 @@
             minimizeButton.ForeColor = Color.White;
             minimizeButton.Location = new Point(720, 5);
             minimizeButton.Name = "minimizeButton";
-            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
             minimizeButton.Size = new Size(82, 29);
             minimizeButton.TabIndex = 2;
             minimizeButton.Text = "minimize";
@@ -115,36 +149,37 @@
             // 
             guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges3;
-            guna2ControlBox2.FillColor = Color.FromArgb(139, 152, 166);
+            guna2ControlBox2.CustomizableEdges = customizableEdges25;
+            guna2ControlBox2.FillColor = Color.FromArgb(77, 77, 77);
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.Location = new Point(820, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges26;
             guna2ControlBox2.Size = new Size(52, 33);
             guna2ControlBox2.TabIndex = 3;
             // 
             // windowTitle
             // 
             windowTitle.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            windowTitle.ForeColor = Color.White;
-            windowTitle.Location = new Point(2, 7);
+            windowTitle.ForeColor = Color.Bisque;
+            windowTitle.Location = new Point(41, 6);
             windowTitle.Margin = new Padding(4, 0, 4, 0);
             windowTitle.Name = "windowTitle";
-            windowTitle.Size = new Size(733, 27);
+            windowTitle.Size = new Size(669, 27);
             windowTitle.TabIndex = 2;
             windowTitle.Text = "Metin2Helper - Beta";
+            windowTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.CustomizableEdges = customizableEdges5;
-            guna2ControlBox1.FillColor = Color.FromArgb(139, 152, 166);
+            guna2ControlBox1.CustomizableEdges = customizableEdges27;
+            guna2ControlBox1.FillColor = Color.FromArgb(77, 77, 77);
             guna2ControlBox1.IconColor = Color.White;
             guna2ControlBox1.Location = new Point(875, 3);
             guna2ControlBox1.Margin = new Padding(4, 3, 4, 3);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2ControlBox1.Size = new Size(52, 33);
             guna2ControlBox1.TabIndex = 2;
             // 
@@ -165,7 +200,7 @@
             containerPanel.BackColor = Color.FromArgb(77, 77, 77);
             containerPanel.Controls.Add(eventPanel);
             containerPanel.Controls.Add(killedRazadorsDGV);
-            containerPanel.Controls.Add(panel1);
+            containerPanel.Controls.Add(razadorSessionManagerPanel);
             containerPanel.Controls.Add(applicationStartLoadingScreen);
             containerPanel.Dock = DockStyle.Fill;
             containerPanel.Location = new Point(1, 41);
@@ -189,9 +224,9 @@
             currentEventLabel.ForeColor = Color.White;
             currentEventLabel.Location = new Point(5, 6);
             currentEventLabel.Name = "currentEventLabel";
-            currentEventLabel.Size = new Size(99, 17);
+            currentEventLabel.Size = new Size(164, 17);
             currentEventLabel.TabIndex = 0;
-            currentEventLabel.Text = "Current Event :";
+            currentEventLabel.Text = "Current Event : Fetching...";
             // 
             // killedRazadorsDGV
             // 
@@ -199,28 +234,28 @@
             killedRazadorsDGV.AllowUserToDeleteRows = false;
             killedRazadorsDGV.AllowUserToResizeColumns = false;
             killedRazadorsDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            killedRazadorsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            killedRazadorsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             killedRazadorsDGV.BackgroundColor = Color.FromArgb(77, 77, 77);
             killedRazadorsDGV.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            killedRazadorsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            killedRazadorsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             killedRazadorsDGV.ColumnHeadersHeight = 4;
             killedRazadorsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle6;
             killedRazadorsDGV.GridColor = Color.FromArgb(231, 229, 255);
             killedRazadorsDGV.Location = new Point(7, 199);
             killedRazadorsDGV.Margin = new Padding(4, 3, 4, 3);
@@ -255,115 +290,105 @@
             killedRazadorsDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             killedRazadorsDGV.CellClick += killedRazadorsDGV_CellClick;
             // 
-            // panel1
+            // razadorSessionManagerPanel
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(razadorCooldownLabel);
-            panel1.Controls.Add(allTimeRecordsLabel);
-            panel1.Controls.Add(todaysRecordsLabel);
-            panel1.Controls.Add(razadorLatestTimeLabel);
-            panel1.Controls.Add(razadorCurrentTimeLabel);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(guna2Button2);
-            panel1.Controls.Add(stopRazadorSessionButton);
-            panel1.Controls.Add(startRazadorSessionButton);
-            panel1.Location = new Point(7, 7);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(374, 186);
-            panel1.TabIndex = 4;
+            razadorSessionManagerPanel.BorderStyle = BorderStyle.FixedSingle;
+            razadorSessionManagerPanel.Controls.Add(removeRazadorCooldownButton);
+            razadorSessionManagerPanel.Controls.Add(guna2PictureBox4);
+            razadorSessionManagerPanel.Controls.Add(guna2PictureBox3);
+            razadorSessionManagerPanel.Controls.Add(guna2PictureBox1);
+            razadorSessionManagerPanel.Controls.Add(razadorCurrentTimeLabel);
+            razadorSessionManagerPanel.Controls.Add(stopRazadorSessionButton);
+            razadorSessionManagerPanel.Controls.Add(startRazadorSessionButton);
+            razadorSessionManagerPanel.Controls.Add(dotIcon);
+            razadorSessionManagerPanel.Controls.Add(guna2PictureBox2);
+            razadorSessionManagerPanel.Controls.Add(razadorCooldownLabel);
+            razadorSessionManagerPanel.Controls.Add(allTimeRecordsLabel);
+            razadorSessionManagerPanel.Controls.Add(razadorLatestTimeLabel);
+            razadorSessionManagerPanel.Controls.Add(razadorSessionManagerTextLabel);
+            razadorSessionManagerPanel.Controls.Add(todaysRecordsLabel);
+            razadorSessionManagerPanel.Location = new Point(7, 7);
+            razadorSessionManagerPanel.Margin = new Padding(4, 3, 4, 3);
+            razadorSessionManagerPanel.Name = "razadorSessionManagerPanel";
+            razadorSessionManagerPanel.Size = new Size(374, 186);
+            razadorSessionManagerPanel.TabIndex = 4;
             // 
-            // razadorCooldownLabel
+            // removeRazadorCooldownButton
             // 
-            razadorCooldownLabel.AutoSize = true;
-            razadorCooldownLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            razadorCooldownLabel.ForeColor = Color.White;
-            razadorCooldownLabel.Location = new Point(4, 153);
-            razadorCooldownLabel.Margin = new Padding(4, 0, 4, 0);
-            razadorCooldownLabel.Name = "razadorCooldownLabel";
-            razadorCooldownLabel.Size = new Size(0, 19);
-            razadorCooldownLabel.TabIndex = 8;
+            removeRazadorCooldownButton.CustomizableEdges = customizableEdges29;
+            removeRazadorCooldownButton.DisabledState.BorderColor = Color.DarkGray;
+            removeRazadorCooldownButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            removeRazadorCooldownButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            removeRazadorCooldownButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            removeRazadorCooldownButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            removeRazadorCooldownButton.Font = new Font("Segoe UI", 9F);
+            removeRazadorCooldownButton.ForeColor = Color.White;
+            removeRazadorCooldownButton.Location = new Point(212, 142);
+            removeRazadorCooldownButton.Name = "removeRazadorCooldownButton";
+            removeRazadorCooldownButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            removeRazadorCooldownButton.Size = new Size(138, 32);
+            removeRazadorCooldownButton.TabIndex = 2;
+            removeRazadorCooldownButton.Text = "Remove Razador CD";
+            removeRazadorCooldownButton.Click += removeRazadorCooldownButton_Click;
             // 
-            // allTimeRecordsLabel
+            // guna2PictureBox4
             // 
-            allTimeRecordsLabel.AutoSize = true;
-            allTimeRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            allTimeRecordsLabel.ForeColor = Color.White;
-            allTimeRecordsLabel.Location = new Point(4, 131);
-            allTimeRecordsLabel.Margin = new Padding(4, 0, 4, 0);
-            allTimeRecordsLabel.Name = "allTimeRecordsLabel";
-            allTimeRecordsLabel.Size = new Size(298, 19);
-            allTimeRecordsLabel.TabIndex = 7;
-            allTimeRecordsLabel.Text = "All Time Records : 0 Entrance, 0 Chests, 0 AVG";
+            guna2PictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox4.CustomizableEdges = customizableEdges31;
+            guna2PictureBox4.Image = Properties.Resources.dot;
+            guna2PictureBox4.ImageRotate = 0F;
+            guna2PictureBox4.Location = new Point(8, 101);
+            guna2PictureBox4.Name = "guna2PictureBox4";
+            guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2PictureBox4.Size = new Size(21, 19);
+            guna2PictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox4.TabIndex = 9;
+            guna2PictureBox4.TabStop = false;
             // 
-            // todaysRecordsLabel
+            // guna2PictureBox3
             // 
-            todaysRecordsLabel.AutoSize = true;
-            todaysRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            todaysRecordsLabel.ForeColor = Color.White;
-            todaysRecordsLabel.Location = new Point(4, 108);
-            todaysRecordsLabel.Margin = new Padding(4, 0, 4, 0);
-            todaysRecordsLabel.Name = "todaysRecordsLabel";
-            todaysRecordsLabel.Size = new Size(292, 19);
-            todaysRecordsLabel.TabIndex = 6;
-            todaysRecordsLabel.Text = "Today's Records : 0 Entrance, 0 Chests, 0 AVG";
+            guna2PictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox3.CustomizableEdges = customizableEdges33;
+            guna2PictureBox3.Image = Properties.Resources.dot;
+            guna2PictureBox3.ImageRotate = 0F;
+            guna2PictureBox3.Location = new Point(8, 26);
+            guna2PictureBox3.Name = "guna2PictureBox3";
+            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2PictureBox3.Size = new Size(21, 19);
+            guna2PictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox3.TabIndex = 8;
+            guna2PictureBox3.TabStop = false;
             // 
-            // razadorLatestTimeLabel
+            // guna2PictureBox1
             // 
-            razadorLatestTimeLabel.AutoSize = true;
-            razadorLatestTimeLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            razadorLatestTimeLabel.ForeColor = Color.White;
-            razadorLatestTimeLabel.Location = new Point(4, 86);
-            razadorLatestTimeLabel.Margin = new Padding(4, 0, 4, 0);
-            razadorLatestTimeLabel.Name = "razadorLatestTimeLabel";
-            razadorLatestTimeLabel.Size = new Size(151, 19);
-            razadorLatestTimeLabel.TabIndex = 5;
-            razadorLatestTimeLabel.Text = "Latest Session Time : 0";
+            guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox1.CustomizableEdges = customizableEdges35;
+            guna2PictureBox1.Image = Properties.Resources.dot;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(8, 64);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2PictureBox1.Size = new Size(21, 19);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox1.TabIndex = 3;
+            guna2PictureBox1.TabStop = false;
             // 
             // razadorCurrentTimeLabel
             // 
             razadorCurrentTimeLabel.AutoSize = true;
             razadorCurrentTimeLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             razadorCurrentTimeLabel.ForeColor = Color.White;
-            razadorCurrentTimeLabel.Location = new Point(4, 66);
+            razadorCurrentTimeLabel.Location = new Point(36, 82);
             razadorCurrentTimeLabel.Margin = new Padding(4, 0, 4, 0);
             razadorCurrentTimeLabel.Name = "razadorCurrentTimeLabel";
             razadorCurrentTimeLabel.Size = new Size(161, 19);
             razadorCurrentTimeLabel.TabIndex = 4;
             razadorCurrentTimeLabel.Text = "Current Session Time : 0";
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Orange;
-            label1.Location = new Point(4, 2);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(201, 24);
-            label1.TabIndex = 3;
-            label1.Text = "Razador Session Manager";
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Gray;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(227, 27);
-            guna2Button2.Margin = new Padding(4, 3, 4, 3);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(105, 32);
-            guna2Button2.TabIndex = 2;
-            guna2Button2.Text = "Terminate";
+            razadorCurrentTimeLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // stopRazadorSessionButton
             // 
-            stopRazadorSessionButton.CustomizableEdges = customizableEdges9;
+            stopRazadorSessionButton.CustomizableEdges = customizableEdges37;
             stopRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -371,18 +396,18 @@
             stopRazadorSessionButton.FillColor = Color.Red;
             stopRazadorSessionButton.Font = new Font("Segoe UI", 9F);
             stopRazadorSessionButton.ForeColor = Color.White;
-            stopRazadorSessionButton.Location = new Point(115, 27);
+            stopRazadorSessionButton.Location = new Point(114, 142);
             stopRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             stopRazadorSessionButton.Name = "stopRazadorSessionButton";
-            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            stopRazadorSessionButton.Size = new Size(105, 32);
+            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            stopRazadorSessionButton.Size = new Size(91, 32);
             stopRazadorSessionButton.TabIndex = 1;
             stopRazadorSessionButton.Text = "Stop";
             stopRazadorSessionButton.Click += stopRazadorSessionButton_Click;
             // 
             // startRazadorSessionButton
             // 
-            startRazadorSessionButton.CustomizableEdges = customizableEdges11;
+            startRazadorSessionButton.CustomizableEdges = customizableEdges39;
             startRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -390,20 +415,106 @@
             startRazadorSessionButton.FillColor = Color.Green;
             startRazadorSessionButton.Font = new Font("Segoe UI", 9F);
             startRazadorSessionButton.ForeColor = Color.White;
-            startRazadorSessionButton.Location = new Point(4, 27);
+            startRazadorSessionButton.Location = new Point(15, 142);
             startRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             startRazadorSessionButton.Name = "startRazadorSessionButton";
-            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            startRazadorSessionButton.Size = new Size(105, 32);
+            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            startRazadorSessionButton.Size = new Size(91, 32);
             startRazadorSessionButton.TabIndex = 0;
             startRazadorSessionButton.Text = "Start";
             startRazadorSessionButton.Click += startRazadorSessionButton_Click;
             // 
+            // dotIcon
+            // 
+            dotIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dotIcon.CustomizableEdges = customizableEdges41;
+            dotIcon.Image = Properties.Resources.dot;
+            dotIcon.ImageRotate = 0F;
+            dotIcon.Location = new Point(8, 82);
+            dotIcon.Name = "dotIcon";
+            dotIcon.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            dotIcon.Size = new Size(21, 19);
+            dotIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            dotIcon.TabIndex = 2;
+            dotIcon.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            guna2PictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox2.CustomizableEdges = customizableEdges43;
+            guna2PictureBox2.Image = Properties.Resources.dot;
+            guna2PictureBox2.ImageRotate = 0F;
+            guna2PictureBox2.Location = new Point(8, 45);
+            guna2PictureBox2.Name = "guna2PictureBox2";
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            guna2PictureBox2.Size = new Size(21, 19);
+            guna2PictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox2.TabIndex = 7;
+            guna2PictureBox2.TabStop = false;
+            // 
+            // razadorCooldownLabel
+            // 
+            razadorCooldownLabel.AutoSize = true;
+            razadorCooldownLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorCooldownLabel.ForeColor = Color.White;
+            razadorCooldownLabel.Location = new Point(36, 101);
+            razadorCooldownLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorCooldownLabel.Name = "razadorCooldownLabel";
+            razadorCooldownLabel.Size = new Size(163, 19);
+            razadorCooldownLabel.TabIndex = 8;
+            razadorCooldownLabel.Text = "Fetching Razador State...";
+            // 
+            // allTimeRecordsLabel
+            // 
+            allTimeRecordsLabel.AutoSize = true;
+            allTimeRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            allTimeRecordsLabel.ForeColor = Color.White;
+            allTimeRecordsLabel.Location = new Point(36, 26);
+            allTimeRecordsLabel.Margin = new Padding(4, 0, 4, 0);
+            allTimeRecordsLabel.Name = "allTimeRecordsLabel";
+            allTimeRecordsLabel.Size = new Size(223, 19);
+            allTimeRecordsLabel.TabIndex = 7;
+            allTimeRecordsLabel.Text = "Total : 0 Entrance, 0 Chests, 0 AVG";
+            // 
+            // razadorLatestTimeLabel
+            // 
+            razadorLatestTimeLabel.AutoSize = true;
+            razadorLatestTimeLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorLatestTimeLabel.ForeColor = Color.White;
+            razadorLatestTimeLabel.Location = new Point(36, 64);
+            razadorLatestTimeLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorLatestTimeLabel.Name = "razadorLatestTimeLabel";
+            razadorLatestTimeLabel.Size = new Size(151, 19);
+            razadorLatestTimeLabel.TabIndex = 5;
+            razadorLatestTimeLabel.Text = "Latest Session Time : 0";
+            // 
+            // razadorSessionManagerTextLabel
+            // 
+            razadorSessionManagerTextLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorSessionManagerTextLabel.ForeColor = Color.Orange;
+            razadorSessionManagerTextLabel.Location = new Point(101, 2);
+            razadorSessionManagerTextLabel.Margin = new Padding(4, 0, 4, 0);
+            razadorSessionManagerTextLabel.Name = "razadorSessionManagerTextLabel";
+            razadorSessionManagerTextLabel.Size = new Size(166, 24);
+            razadorSessionManagerTextLabel.TabIndex = 3;
+            razadorSessionManagerTextLabel.Text = "Razador Session Manager";
+            // 
+            // todaysRecordsLabel
+            // 
+            todaysRecordsLabel.AutoSize = true;
+            todaysRecordsLabel.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            todaysRecordsLabel.ForeColor = Color.White;
+            todaysRecordsLabel.Location = new Point(36, 45);
+            todaysRecordsLabel.Margin = new Padding(4, 0, 4, 0);
+            todaysRecordsLabel.Name = "todaysRecordsLabel";
+            todaysRecordsLabel.Size = new Size(273, 19);
+            todaysRecordsLabel.TabIndex = 6;
+            todaysRecordsLabel.Text = "Today's Total : 0 Entrance, 0 Chests, 0 AVG";
+            // 
             // applicationStartLoadingScreen
             // 
             applicationStartLoadingScreen.BackColor = Color.Orange;
-            applicationStartLoadingScreen.Controls.Add(razadorDgvLoadingLabel);
-            applicationStartLoadingScreen.Controls.Add(label2);
+            applicationStartLoadingScreen.Controls.Add(m2HelperLabel);
             applicationStartLoadingScreen.Controls.Add(loadingLabel);
             applicationStartLoadingScreen.Dock = DockStyle.Fill;
             applicationStartLoadingScreen.Location = new Point(0, 0);
@@ -411,28 +522,15 @@
             applicationStartLoadingScreen.Size = new Size(931, 420);
             applicationStartLoadingScreen.TabIndex = 7;
             // 
-            // razadorDgvLoadingLabel
+            // m2HelperLabel
             // 
-            razadorDgvLoadingLabel.BackColor = Color.FromArgb(77, 77, 77);
-            razadorDgvLoadingLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            razadorDgvLoadingLabel.ForeColor = Color.White;
-            razadorDgvLoadingLabel.Location = new Point(123, 291);
-            razadorDgvLoadingLabel.Margin = new Padding(4, 0, 4, 0);
-            razadorDgvLoadingLabel.Name = "razadorDgvLoadingLabel";
-            razadorDgvLoadingLabel.Size = new Size(121, 24);
-            razadorDgvLoadingLabel.TabIndex = 1;
-            razadorDgvLoadingLabel.Text = "Fetching Data...";
-            razadorDgvLoadingLabel.Visible = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("SimSun", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(323, 145);
-            label2.Name = "label2";
-            label2.Size = new Size(283, 64);
-            label2.TabIndex = 1;
-            label2.Text = "M2Helper";
+            m2HelperLabel.AutoSize = true;
+            m2HelperLabel.Font = new Font("SimSun", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            m2HelperLabel.Location = new Point(323, 145);
+            m2HelperLabel.Name = "m2HelperLabel";
+            m2HelperLabel.Size = new Size(283, 64);
+            m2HelperLabel.TabIndex = 1;
+            m2HelperLabel.Text = "M2Helper";
             // 
             // loadingLabel
             // 
@@ -447,6 +545,15 @@
             // 
             RazadorCooldownTimer.Interval = 1000;
             // 
+            // EventChangeControlTimer
+            // 
+            EventChangeControlTimer.Interval = 1000;
+            // 
+            // eventNotifyIcon
+            // 
+            eventNotifyIcon.Text = "M2Helper";
+            eventNotifyIcon.Visible = true;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -455,6 +562,7 @@
             ClientSize = new Size(933, 462);
             Controls.Add(containerPanel);
             Controls.Add(draggableTopPanel);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "MainWindow";
@@ -464,12 +572,18 @@
             FormClosing += MainWindow_FormClosing;
             Load += Form1_Load;
             draggableTopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             containerPanel.ResumeLayout(false);
             eventPanel.ResumeLayout(false);
             eventPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)killedRazadorsDGV).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            razadorSessionManagerPanel.ResumeLayout(false);
+            razadorSessionManagerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dotIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             applicationStartLoadingScreen.ResumeLayout(false);
             applicationStartLoadingScreen.PerformLayout();
             ResumeLayout(false);
@@ -482,10 +596,8 @@
         private System.Windows.Forms.Label windowTitle;
         private Guna.UI2.WinForms.Guna2DragControl windowTitleDragControl;
         private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.Label razadorDgvLoadingLabel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Panel razadorSessionManagerPanel;
+        private System.Windows.Forms.Label razadorSessionManagerTextLabel;
         private Guna.UI2.WinForms.Guna2Button stopRazadorSessionButton;
         private Guna.UI2.WinForms.Guna2Button startRazadorSessionButton;
         private System.Windows.Forms.Timer RazadorTimer;
@@ -498,11 +610,20 @@
         private Label currentEventLabel;
         private Panel applicationStartLoadingScreen;
         private Label loadingLabel;
-        private Label label2;
+        private Label m2HelperLabel;
         private Guna.UI2.WinForms.Guna2Button minimizeButton;
         private Label allTimeRecordsLabel;
         private Label razadorCooldownLabel;
         private System.Windows.Forms.Timer RazadorCooldownTimer;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox dotIcon;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2GradientButton removeRazadorCooldownButton;
+        private System.Windows.Forms.Timer EventChangeControlTimer;
+        private NotifyIcon eventNotifyIcon;
+        private PictureBox pictureBox1;
     }
 }
 

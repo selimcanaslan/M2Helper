@@ -61,6 +61,16 @@ namespace M2Helper.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dot {
+            get {
+                object obj = ResourceManager.GetObject("dot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream event_notification {
@@ -85,6 +95,26 @@ namespace M2Helper.Properties {
             get {
                 object obj = ResourceManager.GetObject("gficon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap metin2logopng {
+            get {
+                object obj = ResourceManager.GetObject("metin2logopng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap razador_chest {
+            get {
+                object obj = ResourceManager.GetObject("razador_chest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

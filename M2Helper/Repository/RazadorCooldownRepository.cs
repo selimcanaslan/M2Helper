@@ -51,7 +51,32 @@ namespace M2Helper.Repository
                     Console.WriteLine($"new razador time = {razadorCooldown.next_razador_time}");
                 }
             }
-                
+
+        }
+        public void RemoveRazadorCooldown(int id)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                DateTime date1999 = new DateTime(1999, 1, 1);
+                var cooldown = context.RazadorCooldowns.Find(id);
+                if (cooldown != null)
+                {
+                    cooldown.next_razador_time = date1999;
+                    context.SaveChanges();
+                    Console.WriteLine($"new razador time = {cooldown.next_razador_time}");
+                    MessageBox.Show("Razador Cooldown Removed!", "Info");
+                }
+                else
+                {
+                    RazadorCooldown razadorCooldown = new RazadorCooldown();
+                    razadorCooldown.next_razador_time = date1999;
+                    context.RazadorCooldowns.Add(razadorCooldown);
+                    context.SaveChanges();
+                    MessageBox.Show("Razador Cooldown Removed!", "Info");
+                    Console.WriteLine($"new razador time = {razadorCooldown.next_razador_time}");
+                }
+
+            }
         }
     }
 }

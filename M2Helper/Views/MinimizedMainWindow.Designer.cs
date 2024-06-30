@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinimizedMainWindow));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             cooldownLabel = new Label();
@@ -59,7 +59,7 @@
             guna2CustomGradientPanel1.Controls.Add(m2HelperLogo);
             guna2CustomGradientPanel1.Controls.Add(label2);
             guna2CustomGradientPanel1.Controls.Add(label1);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel1.Dock = DockStyle.Fill;
             guna2CustomGradientPanel1.FillColor = Color.Orange;
             guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(255, 128, 0);
@@ -67,7 +67,7 @@
             guna2CustomGradientPanel1.FillColor4 = Color.DarkRed;
             guna2CustomGradientPanel1.Location = new Point(1, 1);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CustomGradientPanel1.Size = new Size(149, 129);
             guna2CustomGradientPanel1.TabIndex = 3;
             // 
@@ -94,7 +94,7 @@
             m2HelperLogo.Location = new Point(103, 0);
             m2HelperLogo.Name = "m2HelperLogo";
             m2HelperLogo.PressedState.ImageSize = new Size(64, 64);
-            m2HelperLogo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            m2HelperLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
             m2HelperLogo.Size = new Size(43, 38);
             m2HelperLogo.TabIndex = 0;
             m2HelperLogo.Click += m2HelperLogo_Click;

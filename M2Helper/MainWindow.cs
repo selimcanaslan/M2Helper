@@ -27,13 +27,14 @@ namespace M2Helper
         private SaleService saleService;
         private WeeklyEventService weeklyEventService;
         private RazadorCooldownService razadorCooldownService;
+        private DataTable weeklyEvents = null;
         private int latestRazadorTimeSpent = 0;
         private bool isTimerStarted = false;
-        private string lastEvent = string.Empty;
         private SoundPlayer loginSound = new SoundPlayer(Resources.event_notification);
         private SoundPlayer exitSound = new SoundPlayer(Resources.exit_notification);
         private SoundPlayer razadorCoolDownFinishedSound = new SoundPlayer(Resources.razador_notification);
 
+        public static string currentEvent = string.Empty;
         public static bool isCooldownTimerStarted = false;
         public static double currentRazadorCooldownTimeInSeconds;
         public static int currentRazadorSessionTime = 0;
@@ -73,24 +74,36 @@ namespace M2Helper
         {
             FillRazadorDGVAndGetCurrentEvent();
         }
-
-        private async void GetCurrentEvent()
+        private async void FetchWeeklyEventsAndStartEventControlTimer()
         {
-            int hourDifference = 1;
-            DataTable events = new DataTable();
-            events = await weeklyEventService.ReadEvents();
+            weeklyEvents = await weeklyEventService.ReadEvents();
+            EventChangeControlTimer.Tick += EventChangeControlTimer_Tick;
+            EventChangeControlTimer.Start();
+        }
+
+        private void EventChangeControlTimer_Tick(object? sender, EventArgs e)
+        {
             int today = (int)DateTime.Now.DayOfWeek;
             int currentHour = (int)DateTime.Now.Hour;
-            if (events.Rows.Count > 0)
+            if (weeklyEvents.Rows.Count > 0)
             {
-                foreach (DataRow row in events.Rows)
+                foreach (DataRow row in weeklyEvents.Rows)
                 {
                     if ((int)row["event_day"] == today)
                     {
                         if (currentHour < (int)row["event_end_time"] && currentHour >= (int)row["event_start_time"])
                         {
-                            currentEventLabel.Text = $"Current Event : {row["event_name"]}";
-                            lastEvent = row["event_name"].ToString();
+                            if (currentEvent != row["event_name"].ToString())
+                            {
+                                currentEvent = row["event_name"].ToString();
+                                currentEventLabel.Text = $"Current Event : {row["event_name"]}";
+                                ShowToastEventNotification("Event Notification", $"Current event is : {row["event_name"]}");
+                                Console.WriteLine($"Event set to {row["event_name"]}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Same Event Still exist!");
+                            }
                         }
                     }
                 }
@@ -100,13 +113,27 @@ namespace M2Helper
                 MessageBox.Show("Events Couldn't Fetch!");
             }
         }
+
+        private void ShowToastEventNotification(string title, string message)
+        {
+            if (eventNotifyIcon.Icon != Resources.gficon)
+            {
+                eventNotifyIcon.Icon = Resources.gficon;
+            }
+            eventNotifyIcon.Icon = Resources.gficon;
+            eventNotifyIcon.BalloonTipTitle = title;
+            eventNotifyIcon.BalloonTipText = message;
+            eventNotifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+            eventNotifyIcon.ShowBalloonTip(3000);
+
+        }
         private async void FillRazadorDGVAndGetCurrentEvent()
         {
             DataTable razadorRecords = new DataTable();
             applicationStartLoadingScreen.BringToFront();
             applicationStartLoadingScreen.Visible = true;
             razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
-            GetCurrentEvent();
+            FetchWeeklyEventsAndStartEventControlTimer();
             GetRazadorCooldownIfExist();
             GetTodaysRecords(razadorRecords);
             killedRazadorsDGV.DataSource = razadorRecords;
@@ -242,12 +269,12 @@ namespace M2Helper
                 }
                 double avg = (double)totalChestCount / todaysRecords.Rows.Count;
                 string formattedAvg = avg.ToString("F2");
-                todaysRecordsLabel.Text = $"Today's Records : {todaysRecords.Rows.Count} Entrance," +
+                todaysRecordsLabel.Text = $"Today's Total : {todaysRecords.Rows.Count} Entrance," +
                 $" {totalChestCount} Chests, {formattedAvg} AVG";
             }
             else if (todaysRecords.Rows.Count == 0)
             {
-                todaysRecordsLabel.Text = "Today's Records : 0 Entrance, 0 Chests, 0 AVG";
+                todaysRecordsLabel.Text = "Today's Total : 0 Entrance, 0 Chests, 0 AVG";
             }
 
             //All Time Records
@@ -258,21 +285,18 @@ namespace M2Helper
                 {
                     totalChestCountOfAllTime += (int)dataRow["ChestCount"];
                 }
-                Console.WriteLine(totalChestCount.ToString());
                 double avgOfAll = (double)totalChestCountOfAllTime / razadorRecords.Rows.Count;
                 string formattedAvgOfAllTime = avgOfAll.ToString("F2");
-                allTimeRecordsLabel.Text = $"All Time Records : {razadorRecords.Rows.Count} Entrance, {totalChestCountOfAllTime} Chests, {formattedAvgOfAllTime} AVG";
+                allTimeRecordsLabel.Text = $"Total : {razadorRecords.Rows.Count} Entrance, {totalChestCountOfAllTime} Chests, {formattedAvgOfAllTime} AVG";
             }
         }
 
         private async void RefreshRazadorDGV()
         {
             DataTable dataTable = new DataTable();
-            razadorDgvLoadingLabel.Visible = true;
             dataTable = await killedRazadorService.ReadKilledRazadorRecords();
             killedRazadorsDGV.DataSource = dataTable;
             GetTodaysRecords(dataTable);
-            razadorDgvLoadingLabel.Visible = false;
         }
 
         private void startRazadorSessionButton_Click(object sender, EventArgs e)
@@ -314,15 +338,22 @@ namespace M2Helper
 
         private void stopRazadorSessionButton_Click(object sender, EventArgs e)
         {
-            RazadorTimer.Stop();
-            isTimerStarted = false;
-            RazadorTimer.Tick -= RazadorTimer_Tick;
-            razadorCurrentTimeLabel.Text = "Current Session Time : 0";
-            latestRazadorTimeSpent = currentRazadorSessionTime;
-            currentRazadorSessionTime = 0;
-            SubmitSession(latestRazadorTimeSpent);
-            razadorCooldownService.UpdateNextRazadorTimeAsync(1);
-            GetRazadorCooldownIfExist();
+            if (isTimerStarted)
+            {
+                RazadorTimer.Stop();
+                isTimerStarted = false;
+                RazadorTimer.Tick -= RazadorTimer_Tick;
+                razadorCurrentTimeLabel.Text = "Current Session Time : 0";
+                latestRazadorTimeSpent = currentRazadorSessionTime;
+                currentRazadorSessionTime = 0;
+                SubmitSession(latestRazadorTimeSpent);
+                razadorCooldownService.UpdateNextRazadorTimeAsync(1);
+                GetRazadorCooldownIfExist();
+            }
+            else
+            {
+                MessageBox.Show("You didn't start a session yet!", "Error");
+            }
         }
 
         private void SubmitSession(int latestTimeSpentOnRazador)
@@ -370,6 +401,15 @@ namespace M2Helper
         {
             PlayExitSound();
             System.Threading.Thread.Sleep(1000);
+        }
+
+        private void removeRazadorCooldownButton_Click(object sender, EventArgs e)
+        {
+            razadorCooldownService.RemoveRazadorCooldown(1);
+            RazadorCooldownTimer.Stop();
+            RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
+            RazadorCooldownTimer.Dispose();
+            GetRazadorCooldownIfExist();
         }
     }
 }

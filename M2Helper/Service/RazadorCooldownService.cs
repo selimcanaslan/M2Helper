@@ -26,5 +26,9 @@ namespace M2Helper.Service
         {
             razadorCooldownRepository.UpdateNextRazadorTime(id);
         }
+        public void RemoveRazadorCooldown(int id)
+        {
+            razadorCooldownRepository.RemoveRazadorCooldown(id);
+        }
     }
 }

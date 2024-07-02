@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             draggableTopPanel = new Panel();
             pictureBox1 = new PictureBox();
             minimizeButton = new Guna.UI2.WinForms.Guna2Button();
@@ -67,6 +69,7 @@
             currentEventLabel = new Label();
             killedRazadorsDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             razadorSessionManagerPanel = new Panel();
+            razadorWeeklyAnalysisButton = new Guna.UI2.WinForms.Guna2Button();
             removeRazadorCooldownButton = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -129,7 +132,7 @@
             // 
             // minimizeButton
             // 
-            minimizeButton.CustomizableEdges = customizableEdges23;
+            minimizeButton.CustomizableEdges = customizableEdges1;
             minimizeButton.DisabledState.BorderColor = Color.DarkGray;
             minimizeButton.DisabledState.CustomBorderColor = Color.DarkGray;
             minimizeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -139,7 +142,7 @@
             minimizeButton.ForeColor = Color.White;
             minimizeButton.Location = new Point(720, 5);
             minimizeButton.Name = "minimizeButton";
-            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            minimizeButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             minimizeButton.Size = new Size(82, 29);
             minimizeButton.TabIndex = 2;
             minimizeButton.Text = "minimize";
@@ -149,12 +152,12 @@
             // 
             guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges25;
+            guna2ControlBox2.CustomizableEdges = customizableEdges3;
             guna2ControlBox2.FillColor = Color.FromArgb(77, 77, 77);
             guna2ControlBox2.IconColor = Color.White;
             guna2ControlBox2.Location = new Point(820, 3);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ControlBox2.Size = new Size(52, 33);
             guna2ControlBox2.TabIndex = 3;
             // 
@@ -173,13 +176,13 @@
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.CustomizableEdges = customizableEdges27;
+            guna2ControlBox1.CustomizableEdges = customizableEdges5;
             guna2ControlBox1.FillColor = Color.FromArgb(77, 77, 77);
             guna2ControlBox1.IconColor = Color.White;
             guna2ControlBox1.Location = new Point(875, 3);
             guna2ControlBox1.Margin = new Padding(4, 3, 4, 3);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ControlBox1.Size = new Size(52, 33);
             guna2ControlBox1.TabIndex = 2;
             // 
@@ -234,28 +237,28 @@
             killedRazadorsDGV.AllowUserToDeleteRows = false;
             killedRazadorsDGV.AllowUserToResizeColumns = false;
             killedRazadorsDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            killedRazadorsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            killedRazadorsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             killedRazadorsDGV.BackgroundColor = Color.FromArgb(77, 77, 77);
             killedRazadorsDGV.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            killedRazadorsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            killedRazadorsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             killedRazadorsDGV.ColumnHeadersHeight = 4;
             killedRazadorsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             killedRazadorsDGV.GridColor = Color.FromArgb(231, 229, 255);
             killedRazadorsDGV.Location = new Point(7, 199);
             killedRazadorsDGV.Margin = new Padding(4, 3, 4, 3);
@@ -293,6 +296,7 @@
             // razadorSessionManagerPanel
             // 
             razadorSessionManagerPanel.BorderStyle = BorderStyle.FixedSingle;
+            razadorSessionManagerPanel.Controls.Add(razadorWeeklyAnalysisButton);
             razadorSessionManagerPanel.Controls.Add(removeRazadorCooldownButton);
             razadorSessionManagerPanel.Controls.Add(guna2PictureBox4);
             razadorSessionManagerPanel.Controls.Add(guna2PictureBox3);
@@ -313,20 +317,41 @@
             razadorSessionManagerPanel.Size = new Size(374, 186);
             razadorSessionManagerPanel.TabIndex = 4;
             // 
+            // razadorWeeklyAnalysisButton
+            // 
+            razadorWeeklyAnalysisButton.CustomizableEdges = customizableEdges7;
+            razadorWeeklyAnalysisButton.DisabledState.BorderColor = Color.DarkGray;
+            razadorWeeklyAnalysisButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            razadorWeeklyAnalysisButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            razadorWeeklyAnalysisButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            razadorWeeklyAnalysisButton.FillColor = Color.FromArgb(192, 0, 0);
+            razadorWeeklyAnalysisButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            razadorWeeklyAnalysisButton.ForeColor = Color.White;
+            razadorWeeklyAnalysisButton.Image = Properties.Resources.razador_chest;
+            razadorWeeklyAnalysisButton.ImageAlign = HorizontalAlignment.Left;
+            razadorWeeklyAnalysisButton.Location = new Point(250, 137);
+            razadorWeeklyAnalysisButton.Name = "razadorWeeklyAnalysisButton";
+            razadorWeeklyAnalysisButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            razadorWeeklyAnalysisButton.Size = new Size(119, 44);
+            razadorWeeklyAnalysisButton.TabIndex = 3;
+            razadorWeeklyAnalysisButton.Text = "Last 7 Day's Analysis";
+            razadorWeeklyAnalysisButton.TextOffset = new Point(10, 0);
+            razadorWeeklyAnalysisButton.Click += razadorWeeklyAnalysisButton_Click;
+            // 
             // removeRazadorCooldownButton
             // 
-            removeRazadorCooldownButton.CustomizableEdges = customizableEdges29;
+            removeRazadorCooldownButton.CustomizableEdges = customizableEdges9;
             removeRazadorCooldownButton.DisabledState.BorderColor = Color.DarkGray;
             removeRazadorCooldownButton.DisabledState.CustomBorderColor = Color.DarkGray;
             removeRazadorCooldownButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             removeRazadorCooldownButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             removeRazadorCooldownButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            removeRazadorCooldownButton.Font = new Font("Segoe UI", 9F);
+            removeRazadorCooldownButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             removeRazadorCooldownButton.ForeColor = Color.White;
-            removeRazadorCooldownButton.Location = new Point(212, 142);
+            removeRazadorCooldownButton.Location = new Point(136, 137);
             removeRazadorCooldownButton.Name = "removeRazadorCooldownButton";
-            removeRazadorCooldownButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            removeRazadorCooldownButton.Size = new Size(138, 32);
+            removeRazadorCooldownButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            removeRazadorCooldownButton.Size = new Size(108, 44);
             removeRazadorCooldownButton.TabIndex = 2;
             removeRazadorCooldownButton.Text = "Remove Razador CD";
             removeRazadorCooldownButton.Click += removeRazadorCooldownButton_Click;
@@ -334,12 +359,12 @@
             // guna2PictureBox4
             // 
             guna2PictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox4.CustomizableEdges = customizableEdges31;
+            guna2PictureBox4.CustomizableEdges = customizableEdges11;
             guna2PictureBox4.Image = Properties.Resources.dot;
             guna2PictureBox4.ImageRotate = 0F;
             guna2PictureBox4.Location = new Point(8, 101);
             guna2PictureBox4.Name = "guna2PictureBox4";
-            guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2PictureBox4.Size = new Size(21, 19);
             guna2PictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox4.TabIndex = 9;
@@ -348,12 +373,12 @@
             // guna2PictureBox3
             // 
             guna2PictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox3.CustomizableEdges = customizableEdges33;
+            guna2PictureBox3.CustomizableEdges = customizableEdges13;
             guna2PictureBox3.Image = Properties.Resources.dot;
             guna2PictureBox3.ImageRotate = 0F;
             guna2PictureBox3.Location = new Point(8, 26);
             guna2PictureBox3.Name = "guna2PictureBox3";
-            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2PictureBox3.Size = new Size(21, 19);
             guna2PictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox3.TabIndex = 8;
@@ -362,12 +387,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox1.CustomizableEdges = customizableEdges35;
+            guna2PictureBox1.CustomizableEdges = customizableEdges15;
             guna2PictureBox1.Image = Properties.Resources.dot;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(8, 64);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2PictureBox1.Size = new Size(21, 19);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox1.TabIndex = 3;
@@ -388,38 +413,38 @@
             // 
             // stopRazadorSessionButton
             // 
-            stopRazadorSessionButton.CustomizableEdges = customizableEdges37;
+            stopRazadorSessionButton.CustomizableEdges = customizableEdges17;
             stopRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             stopRazadorSessionButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             stopRazadorSessionButton.FillColor = Color.Red;
-            stopRazadorSessionButton.Font = new Font("Segoe UI", 9F);
+            stopRazadorSessionButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stopRazadorSessionButton.ForeColor = Color.White;
-            stopRazadorSessionButton.Location = new Point(114, 142);
+            stopRazadorSessionButton.Location = new Point(75, 137);
             stopRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             stopRazadorSessionButton.Name = "stopRazadorSessionButton";
-            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            stopRazadorSessionButton.Size = new Size(91, 32);
+            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            stopRazadorSessionButton.Size = new Size(54, 44);
             stopRazadorSessionButton.TabIndex = 1;
             stopRazadorSessionButton.Text = "Stop";
             stopRazadorSessionButton.Click += stopRazadorSessionButton_Click;
             // 
             // startRazadorSessionButton
             // 
-            startRazadorSessionButton.CustomizableEdges = customizableEdges39;
+            startRazadorSessionButton.CustomizableEdges = customizableEdges19;
             startRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             startRazadorSessionButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             startRazadorSessionButton.FillColor = Color.Green;
-            startRazadorSessionButton.Font = new Font("Segoe UI", 9F);
+            startRazadorSessionButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             startRazadorSessionButton.ForeColor = Color.White;
-            startRazadorSessionButton.Location = new Point(15, 142);
+            startRazadorSessionButton.Location = new Point(8, 137);
             startRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             startRazadorSessionButton.Name = "startRazadorSessionButton";
-            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            startRazadorSessionButton.Size = new Size(91, 32);
+            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            startRazadorSessionButton.Size = new Size(59, 44);
             startRazadorSessionButton.TabIndex = 0;
             startRazadorSessionButton.Text = "Start";
             startRazadorSessionButton.Click += startRazadorSessionButton_Click;
@@ -427,12 +452,12 @@
             // dotIcon
             // 
             dotIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dotIcon.CustomizableEdges = customizableEdges41;
+            dotIcon.CustomizableEdges = customizableEdges21;
             dotIcon.Image = Properties.Resources.dot;
             dotIcon.ImageRotate = 0F;
             dotIcon.Location = new Point(8, 82);
             dotIcon.Name = "dotIcon";
-            dotIcon.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            dotIcon.ShadowDecoration.CustomizableEdges = customizableEdges22;
             dotIcon.Size = new Size(21, 19);
             dotIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             dotIcon.TabIndex = 2;
@@ -441,12 +466,12 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox2.CustomizableEdges = customizableEdges43;
+            guna2PictureBox2.CustomizableEdges = customizableEdges23;
             guna2PictureBox2.Image = Properties.Resources.dot;
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(8, 45);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2PictureBox2.Size = new Size(21, 19);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox2.TabIndex = 7;
@@ -624,6 +649,7 @@
         private System.Windows.Forms.Timer EventChangeControlTimer;
         private NotifyIcon eventNotifyIcon;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button razadorWeeklyAnalysisButton;
     }
 }
 

@@ -111,6 +111,16 @@ namespace M2Helper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Razador {
+            get {
+                object obj = ResourceManager.GetObject("Razador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap razador_chest {
             get {
                 object obj = ResourceManager.GetObject("razador_chest", resourceCulture);

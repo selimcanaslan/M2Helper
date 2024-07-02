@@ -439,6 +439,12 @@ namespace M2Helper
             RazadorCooldownTimer.Dispose();
             GetRazadorCooldownIfExist();
         }
+
+        private async void razadorWeeklyAnalysisButton_Click(object sender, EventArgs e)
+        {
+            WeeklyAnalysisWindow weeklyRazadorAnalysis = new WeeklyAnalysisWindow(await killedRazadorService.ReadKilledRazadorRecords());
+            weeklyRazadorAnalysis.ShowDialog();
+        }
     }
 }
 

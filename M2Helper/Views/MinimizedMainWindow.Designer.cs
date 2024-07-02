@@ -35,6 +35,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            currentEventLabel = new Label();
             cooldownLabel = new Label();
             m2HelperLogo = new Guna.UI2.WinForms.Guna2ImageButton();
             label2 = new Label();
@@ -43,6 +44,7 @@
             guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(components);
             RazadorCooldownTimer = new System.Windows.Forms.Timer(components);
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            CurrentEventCheckerTimer = new System.Windows.Forms.Timer(components);
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,6 +57,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.Controls.Add(currentEventLabel);
             guna2CustomGradientPanel1.Controls.Add(cooldownLabel);
             guna2CustomGradientPanel1.Controls.Add(m2HelperLogo);
             guna2CustomGradientPanel1.Controls.Add(label2);
@@ -70,6 +73,17 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CustomGradientPanel1.Size = new Size(149, 129);
             guna2CustomGradientPanel1.TabIndex = 3;
+            // 
+            // currentEventLabel
+            // 
+            currentEventLabel.AutoSize = true;
+            currentEventLabel.BackColor = Color.Transparent;
+            currentEventLabel.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            currentEventLabel.ForeColor = Color.White;
+            currentEventLabel.Location = new Point(3, 79);
+            currentEventLabel.Name = "currentEventLabel";
+            currentEventLabel.Size = new Size(0, 20);
+            currentEventLabel.TabIndex = 4;
             // 
             // cooldownLabel
             // 
@@ -146,6 +160,10 @@
             guna2DragControl1.TargetControl = cooldownLabel;
             guna2DragControl1.UseTransparentDrag = true;
             // 
+            // CurrentEventCheckerTimer
+            // 
+            CurrentEventCheckerTimer.Interval = 500;
+            // 
             // MinimizedMainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -176,5 +194,7 @@
         private Label cooldownLabel;
         private System.Windows.Forms.Timer RazadorCooldownTimer;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Label currentEventLabel;
+        private System.Windows.Forms.Timer CurrentEventCheckerTimer;
     }
 }

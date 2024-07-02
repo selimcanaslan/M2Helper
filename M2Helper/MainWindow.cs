@@ -18,6 +18,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Text.RegularExpressions;
 using System.Media;
 using M2Helper.Properties;
+using System.Diagnostics;
 
 namespace M2Helper
 {
@@ -30,10 +31,12 @@ namespace M2Helper
         private DataTable weeklyEvents = null;
         private int latestRazadorTimeSpent = 0;
         private bool isTimerStarted = false;
+        private DateTime cetNow;
         private SoundPlayer loginSound = new SoundPlayer(Resources.event_notification);
         private SoundPlayer exitSound = new SoundPlayer(Resources.exit_notification);
         private SoundPlayer razadorCoolDownFinishedSound = new SoundPlayer(Resources.razador_notification);
 
+        public static int AvgTimeSpentInRazador;
         public static string currentEvent = string.Empty;
         public static bool isCooldownTimerStarted = false;
         public static double currentRazadorCooldownTimeInSeconds;
@@ -57,6 +60,7 @@ namespace M2Helper
 
         }
 
+
         private void PlayLoginSound()
         {
             loginSound.Play();
@@ -72,8 +76,63 @@ namespace M2Helper
 
         private void GetEverything()
         {
-            FillRazadorDGVAndGetCurrentEvent();
+            FetchThings();
         }
+
+        private async void FetchThings()
+        {
+            DataTable razadorRecords = new DataTable();
+            applicationStartLoadingScreen.BringToFront();
+            applicationStartLoadingScreen.Visible = true;
+            razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
+            FetchWeeklyEventsAndStartEventControlTimer();
+            GetRazadorCooldownIfExist();
+            GetTodaysRecords(razadorRecords);
+            CalculateAvgTimeSpent(razadorRecords);
+            razadorRecords.Columns.Remove("isMoonlightEventSession");
+            killedRazadorsDGV.DataSource = razadorRecords;
+            killedRazadorsDGV.Columns[0].HeaderText = "Id";
+            killedRazadorsDGV.Columns[1].HeaderText = "Time Spent";
+            killedRazadorsDGV.Columns[2].HeaderText = "When Killed";
+            killedRazadorsDGV.Columns[3].HeaderText = "Chest Count";
+            killedRazadorsDGV.AutoResizeColumnHeadersHeight();
+            killedRazadorsDGV.AutoGenerateColumns = false;
+
+            DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
+            cellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            foreach (DataGridViewColumn column in killedRazadorsDGV.Columns)
+            {
+                column.DefaultCellStyle = cellStyle;
+                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+            foreach (DataGridViewColumn column in killedRazadorsDGV.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            killedRazadorsDGV.Columns[killedRazadorsDGV.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            killedRazadorsDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            PlayLoginSound();
+            applicationStartLoadingScreen.Visible = false;
+        }
+
+        private void CalculateAvgTimeSpent(DataTable razadorRecords)
+        {
+            int count = 0;
+            int total = 0;
+            foreach (DataRow record in razadorRecords.Rows)
+            {
+                if (!(bool)record["isMoonlightEventSession"])
+                {
+                    total += (int)record["TimeSpentBySecond"];
+                    count += 1;
+                }
+            }
+            Console.WriteLine($"Avg time spent is : {total / count}");
+            AvgTimeSpentInRazador = total / count;
+        }
+
         private async void FetchWeeklyEventsAndStartEventControlTimer()
         {
             weeklyEvents = await weeklyEventService.ReadEvents();
@@ -83,8 +142,11 @@ namespace M2Helper
 
         private void EventChangeControlTimer_Tick(object? sender, EventArgs e)
         {
-            int today = (int)DateTime.Now.DayOfWeek;
-            int currentHour = (int)DateTime.Now.Hour;
+            DateTime utcNow = DateTime.UtcNow;
+            TimeZoneInfo cetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time");
+            cetNow = TimeZoneInfo.ConvertTimeFromUtc(utcNow, cetTimeZone);
+            int today = (int)cetNow.DayOfWeek;
+            int currentHour = (int)cetNow.Hour;
             if (weeklyEvents.Rows.Count > 0)
             {
                 foreach (DataRow row in weeklyEvents.Rows)
@@ -127,41 +189,7 @@ namespace M2Helper
             eventNotifyIcon.ShowBalloonTip(3000);
 
         }
-        private async void FillRazadorDGVAndGetCurrentEvent()
-        {
-            DataTable razadorRecords = new DataTable();
-            applicationStartLoadingScreen.BringToFront();
-            applicationStartLoadingScreen.Visible = true;
-            razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
-            FetchWeeklyEventsAndStartEventControlTimer();
-            GetRazadorCooldownIfExist();
-            GetTodaysRecords(razadorRecords);
-            killedRazadorsDGV.DataSource = razadorRecords;
-            killedRazadorsDGV.Columns[0].HeaderText = "Id";
-            killedRazadorsDGV.Columns[1].HeaderText = "Time Spent";
-            killedRazadorsDGV.Columns[2].HeaderText = "When Killed";
-            killedRazadorsDGV.Columns[3].HeaderText = "Chest Count";
-            killedRazadorsDGV.AutoResizeColumnHeadersHeight();
-            killedRazadorsDGV.AutoGenerateColumns = false;
 
-            DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
-            cellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-
-            foreach (DataGridViewColumn column in killedRazadorsDGV.Columns)
-            {
-                column.DefaultCellStyle = cellStyle;
-                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
-            foreach (DataGridViewColumn column in killedRazadorsDGV.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
-            killedRazadorsDGV.Columns[killedRazadorsDGV.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            killedRazadorsDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            PlayLoginSound();
-            applicationStartLoadingScreen.Visible = false;
-        }
 
         private async void GetRazadorCooldownIfExist()
         {
@@ -239,7 +267,6 @@ namespace M2Helper
                 }
             }
         }
-
         private void GetTodaysRecords(DataTable razadorRecords)
         {
 
@@ -293,10 +320,11 @@ namespace M2Helper
 
         private async void RefreshRazadorDGV()
         {
-            DataTable dataTable = new DataTable();
-            dataTable = await killedRazadorService.ReadKilledRazadorRecords();
-            killedRazadorsDGV.DataSource = dataTable;
-            GetTodaysRecords(dataTable);
+            DataTable razadorRecords = new DataTable();
+            razadorRecords = await killedRazadorService.ReadKilledRazadorRecords();
+            killedRazadorsDGV.DataSource = razadorRecords;
+            CalculateAvgTimeSpent(razadorRecords);
+            GetTodaysRecords(razadorRecords);
         }
 
         private void startRazadorSessionButton_Click(object sender, EventArgs e)
@@ -358,7 +386,7 @@ namespace M2Helper
 
         private void SubmitSession(int latestTimeSpentOnRazador)
         {
-            ChestCountDialog chestCountDialog = new ChestCountDialog(latestTimeSpentOnRazador);
+            ChestCountDialog chestCountDialog = new ChestCountDialog(latestTimeSpentOnRazador, AvgTimeSpentInRazador);
             chestCountDialog.ShowDialog();
             if (isLatestRazadorSessionSubmitted)
             {

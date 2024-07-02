@@ -12,5 +12,6 @@ namespace M2Helper.Models
         public int Time_spent_by_second { get; set; }
         public DateTime When_killed { get; set; }
         public int Chest_Count { get; set; }
+        public bool isMoonlightEventSession {  get; set; }
     }
 }

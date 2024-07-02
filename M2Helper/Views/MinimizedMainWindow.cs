@@ -19,6 +19,7 @@ namespace M2Helper.Views
             InitializeComponent();
             currentRazadorCooldownTime = MainWindow.currentRazadorCooldownTimeInSeconds;
             ShowCooldownIfExist();
+            ShowCurrentEvent();
         }
 
         private void ShowCooldownIfExist()
@@ -37,13 +38,24 @@ namespace M2Helper.Views
             {
                 RazadorCooldownTimer.Stop();
                 RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
-                cooldownLabel.Text = "No Cooldown For Razador!";
+                cooldownLabel.Text = "No Razador CD!";
             }
             if (currentRazadorCooldownTime > 0)
             {
                 cooldownLabel.Text = $"{(int)currentRazadorCooldownTime / 60}' {(int)currentRazadorCooldownTime % 60}'' To Razador!";
             }
         }
+        private void ShowCurrentEvent()
+        {
+            CurrentEventCheckerTimer.Tick += CurrentEventCheckerTimer_Tick;
+            CurrentEventCheckerTimer.Start();
+        }
+
+        private void CurrentEventCheckerTimer_Tick(object sender, EventArgs e)
+        {
+            currentEventLabel.Text = $"Event : {MainWindow.currentEvent}";
+        }
+
         private void m2HelperLogo_Click(object sender, EventArgs e)
         {
             this.Close();

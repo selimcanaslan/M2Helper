@@ -16,10 +16,12 @@ namespace Metin2Helper.Views
     public partial class ChestCountDialog : Form
     {
         KilledRazadorService killedRazadorService;
+        private int avgTimeSpent;
         private int timeSpent;
-        public ChestCountDialog(int timeSpent)
+        public ChestCountDialog(int timeSpent, int avgTimeSpent)
         {
             this.timeSpent = timeSpent;
+            this.avgTimeSpent = avgTimeSpent;
             killedRazadorService = new KilledRazadorService();
             InitializeComponent();
         }
@@ -28,8 +30,23 @@ namespace Metin2Helper.Views
         {
             KilledRazador killedRazador = new KilledRazador();
             killedRazador.When_killed = DateTime.Now;
-            killedRazador.Time_spent_by_second = this.timeSpent;
             killedRazador.Chest_Count = Convert.ToInt16(chestCountComboBox.Text);
+            if (forgotStartToSession.Checked)
+            {
+                killedRazador.Time_spent_by_second = avgTimeSpent;
+            }
+            else
+            {
+                killedRazador.Time_spent_by_second = this.timeSpent;
+            }
+            if (isMoonlightEvent.Checked)
+            {
+                killedRazador.isMoonlightEventSession = true;
+            }
+            else
+            {
+                killedRazador.isMoonlightEventSession = false;
+            }
 
             killedRazadorService.AddKilledRazadorRecord(killedRazador);
             MainWindow.isLatestRazadorSessionSubmitted = true;

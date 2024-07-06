@@ -19,6 +19,7 @@ using System.Text.RegularExpressions;
 using System.Media;
 using M2Helper.Properties;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace M2Helper
 {
@@ -35,9 +36,11 @@ namespace M2Helper
         private SoundPlayer loginSound = new SoundPlayer(Resources.event_notification);
         private SoundPlayer exitSound = new SoundPlayer(Resources.exit_notification);
         private SoundPlayer razadorCoolDownFinishedSound = new SoundPlayer(Resources.razador_notification);
+        private int razadorSessionLabelidentifier = 1;
 
         public static int AvgTimeSpentInRazador;
         public static string currentEvent = string.Empty;
+        public static string currentNextEvent = string.Empty;
         public static bool isCooldownTimerStarted = false;
         public static double currentRazadorCooldownTimeInSeconds;
         public static int currentRazadorSessionTime = 0;
@@ -51,16 +54,11 @@ namespace M2Helper
             razadorCooldownService = new RazadorCooldownService();
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Icon = Properties.Resources.gficon;
-
+            this.Icon = Resources.gficon;
             GetEverything();
-
         }
-
-
         private void PlayLoginSound()
         {
             loginSound.Play();
@@ -95,7 +93,7 @@ namespace M2Helper
             killedRazadorsDGV.Columns[1].HeaderText = "Time Spent";
             killedRazadorsDGV.Columns[2].HeaderText = "When Killed";
             killedRazadorsDGV.Columns[3].HeaderText = "Chest Count";
-            killedRazadorsDGV.AutoResizeColumnHeadersHeight();
+            killedRazadorsDGV.ColumnHeadersHeight = 20;
             killedRazadorsDGV.AutoGenerateColumns = false;
 
             DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
@@ -135,6 +133,7 @@ namespace M2Helper
 
         private async void FetchWeeklyEventsAndStartEventControlTimer()
         {
+            currentEventLabel.ForeColor = Color.Orange;
             weeklyEvents = await weeklyEventService.ReadEvents();
             EventChangeControlTimer.Tick += EventChangeControlTimer_Tick;
             EventChangeControlTimer.Start();
@@ -142,6 +141,7 @@ namespace M2Helper
 
         private void EventChangeControlTimer_Tick(object? sender, EventArgs e)
         {
+            string identifier = string.Empty;
             DateTime utcNow = DateTime.UtcNow;
             TimeZoneInfo cetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time");
             cetNow = TimeZoneInfo.ConvertTimeFromUtc(utcNow, cetTimeZone);
@@ -151,10 +151,23 @@ namespace M2Helper
             {
                 foreach (DataRow row in weeklyEvents.Rows)
                 {
+                    if (identifier == "done")
+                    {
+                        currentNextEvent = row["event_name"].ToString();
+                        identifier = string.Empty;
+                    }
                     if ((int)row["event_day"] == today)
                     {
                         if (currentHour < (int)row["event_end_time"] && currentHour >= (int)row["event_start_time"])
                         {
+                            identifier = "done";
+                            DateTime eventEndTime = new DateTime(cetNow.Year, cetNow.Month, cetNow.Day, (int)row["event_end_time"],0,0,0);
+                            TimeSpan difference = eventEndTime - cetNow;
+
+                            string timeLeftToNewEvent = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                                                       difference.Hours,
+                                                                       difference.Minutes,
+                                                                       difference.Seconds);
                             if (currentEvent != row["event_name"].ToString())
                             {
                                 currentEvent = row["event_name"].ToString();
@@ -164,7 +177,8 @@ namespace M2Helper
                             }
                             else
                             {
-                                Console.WriteLine("Same Event Still exist!");
+                                currentEventLabel.Text = $"Current Event : {row["event_name"]} ({timeLeftToNewEvent.ToString()} Left to {currentNextEvent})";
+                                Console.WriteLine("Same Event Still exist! " + timeLeftToNewEvent.ToString());
                             }
                         }
                     }
@@ -344,24 +358,35 @@ namespace M2Helper
 
         private void RazadorTimer_Tick(object sender, EventArgs e)
         {
-            currentRazadorSessionTime += 1;
-            razadorCurrentTimeLabel.Text = $"Current Session Time : {ConvertTime(currentRazadorSessionTime)}";
-        }
-
-        private string ConvertTime(int time)
-        {
-            string textToReturn;
-            int minute = time / 60;
-            int second = time % 60;
-            if (minute < 1)
+            if (razadorSessionLabelidentifier == 1)
             {
-                textToReturn = $"{second}''";
+                string oneDotText = "A Razador Session In Progress.";
+                razadorCooldownLabel.Text = oneDotText;
+                razadorSessionLabelidentifier = 2;
+            }
+            else if (razadorSessionLabelidentifier == 2)
+            {
+                string twoDotText = "A Razador Session In Progress..";
+                razadorCooldownLabel.Text = twoDotText;
+                razadorSessionLabelidentifier = 3;
             }
             else
             {
-                textToReturn = $"{minute}' {second}''";
+                string threeDotText = "A Razador Session In Progress...";
+                razadorCooldownLabel.Text = threeDotText;
+                razadorSessionLabelidentifier = 1;
             }
-            return textToReturn;
+            startRazadorSessionButton.Enabled = false;
+            razadorCooldownLabel.ForeColor = Color.Gray;
+            currentRazadorSessionTime += 1;
+            int minute = currentRazadorSessionTime / 60;
+            int second = currentRazadorSessionTime % 60;
+            if (minute >= 10)
+            {
+                razadorCurrentTimeSecondLabel.Location = new Point(80, 143);
+            }
+            razadorCurrentTimeMinuteLabel.Text = $"{minute}'";
+            razadorCurrentTimeSecondLabel.Text = $"{second}''";
         }
 
         private void stopRazadorSessionButton_Click(object sender, EventArgs e)
@@ -371,9 +396,11 @@ namespace M2Helper
                 RazadorTimer.Stop();
                 isTimerStarted = false;
                 RazadorTimer.Tick -= RazadorTimer_Tick;
-                razadorCurrentTimeLabel.Text = "Current Session Time : 0";
+                razadorCurrentTimeMinuteLabel.Text = "0'";
+                razadorCurrentTimeSecondLabel.Text = "0''";
                 latestRazadorTimeSpent = currentRazadorSessionTime;
                 currentRazadorSessionTime = 0;
+                startRazadorSessionButton.Enabled = true;
                 SubmitSession(latestRazadorTimeSpent);
                 razadorCooldownService.UpdateNextRazadorTimeAsync(1);
                 GetRazadorCooldownIfExist();
@@ -399,6 +426,22 @@ namespace M2Helper
 
             }
 
+        }
+
+        private string ConvertTime(int time)
+        {
+            string textToReturn;
+            int minute = time / 60;
+            int second = time % 60;
+            if (minute < 1)
+            {
+                textToReturn = $"{second}''";
+            }
+            else
+            {
+                textToReturn = $"{minute}' {second}''";
+            }
+            return textToReturn;
         }
 
         private void killedRazadorsDGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -428,7 +471,7 @@ namespace M2Helper
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             PlayExitSound();
-            System.Threading.Thread.Sleep(1000);
+            Thread.Sleep(1000);
         }
 
         private void removeRazadorCooldownButton_Click(object sender, EventArgs e)
@@ -437,6 +480,7 @@ namespace M2Helper
             RazadorCooldownTimer.Stop();
             RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
             RazadorCooldownTimer.Dispose();
+            isCooldownTimerStarted = false;
             GetRazadorCooldownIfExist();
         }
 

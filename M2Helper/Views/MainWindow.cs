@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,17 +37,20 @@ namespace M2Helper
         private SoundPlayer exitSound = new SoundPlayer(Resources.exit_notification);
         private SoundPlayer razadorCoolDownFinishedSound = new SoundPlayer(Resources.razador_notification);
         private int razadorSessionLabelidentifier = 1;
-
+        private bool isMainWindowHiddenByNotifyIcon = false;
         public static int AvgTimeSpentInRazador;
         public static string currentEvent = string.Empty;
+        public static int currentEventId = -1;
         public static string currentNextEvent = string.Empty;
         public static bool isCooldownTimerStarted = false;
         public static double currentRazadorCooldownTimeInSeconds;
         public static int currentRazadorSessionTime = 0;
         public static bool isLatestRazadorSessionSubmitted;
         public static bool isLatestDeleteActionDoneSuccesfully;
-        public MainWindow()
+        public static Users loggedInUser = new Users();
+        public MainWindow(Users user)
         {
+            loggedInUser = user;
             killedRazadorService = new KilledRazadorService();
             saleService = new SaleService();
             weeklyEventService = new WeeklyEventService();
@@ -58,7 +61,27 @@ namespace M2Helper
         {
             this.Icon = Resources.gficon;
             GetEverything();
+            endOfDayCheckerTimer.Tick += EndOfDayCheckerTimer_Tick;
+            endOfDayCheckerTimer.Start();
+            razadorPicture.DoubleClick += RazadorPicture_DoubleClick;
         }
+
+        private void EndOfDayCheckerTimer_Tick(object? sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            if (now.Hour == 23 && now.Minute == 59 && now.Second == 59)
+            {
+                EventChangeControlTimer.Tick -= EventChangeControlTimer_Tick;
+                EventChangeControlTimer.Stop();
+                GetEverything();
+            }
+        }
+
+        private void RazadorPicture_DoubleClick(object? sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void PlayLoginSound()
         {
             loginSound.Play();
@@ -117,18 +140,22 @@ namespace M2Helper
 
         private void CalculateAvgTimeSpent(DataTable razadorRecords)
         {
-            int count = 0;
-            int total = 0;
-            foreach (DataRow record in razadorRecords.Rows)
+            if (razadorRecords.Rows.Count > 0)
             {
-                if (!(bool)record["isMoonlightEventSession"])
+                int count = 0;
+                int total = 0;
+                foreach (DataRow record in razadorRecords.Rows)
                 {
-                    total += (int)record["TimeSpentBySecond"];
-                    count += 1;
+                    if (!(bool)record["isMoonlightEventSession"])
+                    {
+                        total += (int)record["TimeSpentBySecond"];
+                        count += 1;
+                    }
                 }
+                Console.WriteLine($"Avg time spent is : {total / count}");
+                AvgTimeSpentInRazador = total / count;
             }
-            Console.WriteLine($"Avg time spent is : {total / count}");
-            AvgTimeSpentInRazador = total / count;
+
         }
 
         private async void FetchWeeklyEventsAndStartEventControlTimer()
@@ -161,9 +188,17 @@ namespace M2Helper
                         if (currentHour < (int)row["event_end_time"] && currentHour >= (int)row["event_start_time"])
                         {
                             identifier = "done";
-                            DateTime eventEndTime = new DateTime(cetNow.Year, cetNow.Month, cetNow.Day, (int)row["event_end_time"],0,0,0);
-                            TimeSpan difference = eventEndTime - cetNow;
-
+                            TimeSpan difference = new TimeSpan();
+                            if ((int)row["event_start_time"] == 20)
+                            {
+                                DateTime eventEndTime = new DateTime(cetNow.Year, cetNow.Month, cetNow.Day, (int)row["event_end_time"] - 1, 59, 59, 0);
+                                difference = eventEndTime - cetNow;
+                            }
+                            else
+                            {
+                                DateTime eventEndTime = new DateTime(cetNow.Year, cetNow.Month, cetNow.Day, (int)row["event_end_time"], 0, 0, 0);
+                                difference = eventEndTime - cetNow;
+                            }
                             string timeLeftToNewEvent = string.Format("{0:D2}:{1:D2}:{2:D2}",
                                                                        difference.Hours,
                                                                        difference.Minutes,
@@ -171,6 +206,7 @@ namespace M2Helper
                             if (currentEvent != row["event_name"].ToString())
                             {
                                 currentEvent = row["event_name"].ToString();
+                                currentEventId = (int)row["event_id"];
                                 currentEventLabel.Text = $"Current Event : {row["event_name"]}";
                                 ShowToastEventNotification("Event Notification", $"Current event is : {row["event_name"]}");
                                 Console.WriteLine($"Event set to {row["event_name"]}");
@@ -178,10 +214,25 @@ namespace M2Helper
                             else
                             {
                                 currentEventLabel.Text = $"Current Event : {row["event_name"]} ({timeLeftToNewEvent.ToString()} Left to {currentNextEvent})";
+                                eventNotifyIcon.Text = $"Current Event : {row["event_name"]} ({timeLeftToNewEvent.ToString()} Left to {currentNextEvent})";
                                 Console.WriteLine("Same Event Still exist! " + timeLeftToNewEvent.ToString());
                             }
                         }
+                        if (identifier == "done")
+                        {
+                            if (currentEventId == 28)
+                            {
+                                foreach (DataRow row2 in weeklyEvents.Rows)
+                                {
+                                    if ((int)row2["event_id"] == 1)
+                                    {
+                                        currentNextEvent = row2["event_name"].ToString();
+                                    }
+                                }
+                            }
+                        }
                     }
+
                 }
             }
             else
@@ -201,12 +252,12 @@ namespace M2Helper
             eventNotifyIcon.BalloonTipText = message;
             eventNotifyIcon.BalloonTipIcon = ToolTipIcon.Info;
             eventNotifyIcon.ShowBalloonTip(3000);
-
         }
 
 
         private async void GetRazadorCooldownIfExist()
         {
+            razadorCooldownLabel.Text = "Fetching...";
             DataTable cooldown = new DataTable();
             cooldown = await razadorCooldownService.GetNextRazadorDate();
             if (cooldown.Rows.Count > 0)
@@ -383,7 +434,7 @@ namespace M2Helper
             int second = currentRazadorSessionTime % 60;
             if (minute >= 10)
             {
-                razadorCurrentTimeSecondLabel.Location = new Point(80, 143);
+                razadorCurrentTimeSecondLabel.Location = new Point(92, 129);
             }
             razadorCurrentTimeMinuteLabel.Text = $"{minute}'";
             razadorCurrentTimeSecondLabel.Text = $"{second}''";
@@ -398,6 +449,7 @@ namespace M2Helper
                 RazadorTimer.Tick -= RazadorTimer_Tick;
                 razadorCurrentTimeMinuteLabel.Text = "0'";
                 razadorCurrentTimeSecondLabel.Text = "0''";
+                razadorCurrentTimeSecondLabel.Location = new Point(57, 129);
                 latestRazadorTimeSpent = currentRazadorSessionTime;
                 currentRazadorSessionTime = 0;
                 startRazadorSessionButton.Enabled = true;
@@ -488,6 +540,78 @@ namespace M2Helper
         {
             WeeklyAnalysisWindow weeklyRazadorAnalysis = new WeeklyAnalysisWindow(await killedRazadorService.ReadKilledRazadorRecords());
             weeklyRazadorAnalysis.ShowDialog();
+        }
+
+        private void corTrackingButton_Click(object sender, EventArgs e)
+        {
+            CorTrackingWindow corTrackingWindow = new CorTrackingWindow();
+            corTrackingWindow.ShowDialog();
+        }
+
+        private void cooldownsButton_Click(object sender, EventArgs e)
+        {
+            if (cooldownsPanel.Visible)
+            {
+                cooldownsPanel.Visible = false;
+            }
+            else
+            {
+                cooldownsPanel.Visible = true;
+            }
+        }
+
+        private void biologEditButton_Click(object sender, EventArgs e)
+        {
+            CooldownEditWindow cew = new CooldownEditWindow("biolog");
+            cew.ShowDialog();
+        }
+
+        private void costumeHelmetEditButton_Click(object sender, EventArgs e)
+        {
+            CooldownEditWindow cew = new CooldownEditWindow("helmet");
+            cew.ShowDialog();
+        }
+
+        private void costumeArmorEditButton_Click(object sender, EventArgs e)
+        {
+            CooldownEditWindow cew = new CooldownEditWindow("armor");
+            cew.ShowDialog();
+        }
+
+        private void costumeWeaponEditButton_Click(object sender, EventArgs e)
+        {
+            CooldownEditWindow cew = new CooldownEditWindow("weapon");
+            cew.ShowDialog();
+        }
+
+        private void collapseExpandButton_Click(object sender, EventArgs e)
+        {
+            if (this.Size.Width == 500 && this.Size.Height == 462)
+            {
+                collapseExpandButton.Text = "Collapse";
+                this.Size = new Size(933, 462);
+                controllersPanel.Location = new Point(719, 2);
+            }
+            else
+            {
+                collapseExpandButton.Text = "Expand";
+                this.Size = new Size(500, 462);
+                controllersPanel.Location = new Point(285, 2);
+            }
+        }
+
+        private void eventNotifyIcon_Click(object sender, EventArgs e)
+        {
+            if (isMainWindowHiddenByNotifyIcon)
+            {
+                isMainWindowHiddenByNotifyIcon = false;
+                this.Show();
+            }
+            else
+            {
+                isMainWindowHiddenByNotifyIcon = true;
+                this.Hide();
+            }
         }
     }
 }

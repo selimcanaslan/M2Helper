@@ -1,3 +1,5 @@
+using M2Helper.Views;
+
 namespace M2Helper
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace M2Helper
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainWindow());
+            Application.Run(new LoginWindow());
         }
     }
 }

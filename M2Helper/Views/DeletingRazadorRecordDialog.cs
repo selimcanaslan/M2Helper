@@ -21,6 +21,7 @@ namespace Metin2Helper.Views
             killedRazadorService = new KilledRazadorService();
             this._recordId = recordId;
             InitializeComponent();
+            razadorChestCountComboBox.SelectedIndex = 0;
         }
 
         private void yesButton_Click(object sender, EventArgs e)
@@ -34,6 +35,15 @@ namespace Metin2Helper.Views
         {
             MainWindow.isLatestDeleteActionDoneSuccesfully = false;
             this.Close();
+        }
+
+        private void editChestCountButton_Click(object sender, EventArgs e)
+        {
+            var selectedValue = razadorChestCountComboBox.SelectedItem?.ToString();
+            if (selectedValue != null)
+            {
+                int selectedChestCount = Int32.Parse(selectedValue);
+            }
         }
     }
 }

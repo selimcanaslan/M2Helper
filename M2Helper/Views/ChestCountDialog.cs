@@ -31,6 +31,7 @@ namespace Metin2Helper.Views
             KilledRazador killedRazador = new KilledRazador();
             killedRazador.When_killed = DateTime.Now;
             killedRazador.Chest_Count = Convert.ToInt16(chestCountComboBox.Text);
+            killedRazador.UserId = MainWindow.loggedInUser.UserId;
             if (forgotStartToSession.Checked)
             {
                 killedRazador.Time_spent_by_second = avgTimeSpent;

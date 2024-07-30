@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,7 @@ namespace M2Helper.Models
         public DateTime When_killed { get; set; }
         public int Chest_Count { get; set; }
         public bool isMoonlightEventSession {  get; set; }
+        public int UserId {  get; set; }
+        public Users User { get; set; }
     }
 }

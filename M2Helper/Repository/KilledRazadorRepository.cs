@@ -37,7 +37,10 @@ namespace M2Helper.Repository
 
             using (var context = new ApplicationDbContext())
             {
-                var records = await context.KilledRazadors.OrderByDescending(r => r.Id).ToListAsync();
+                var records = await context.KilledRazadors
+                    .Where(r => r.UserId == MainWindow.loggedInUser.UserId)
+                    .OrderByDescending(r => r.Id)
+                    .ToListAsync();
 
                 foreach (var record in records)
                 {

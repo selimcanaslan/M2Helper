@@ -11,11 +11,12 @@ namespace M2Helper.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        public DbSet<Users> Users { get; set; }
         public DbSet<KilledRazador> KilledRazadors { get; set; }
         public DbSet<Sale> Sales { get; set; }
         public DbSet<WeeklyEvent> WeeklyEvents { get; set; }
         public DbSet<RazadorCooldown> RazadorCooldowns { get; set; }
-
+        public DbSet<Key> Keys { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"workstation id=metin2helper.mssql.somee.com;packet size=4096;user id=sca33_SQLLogin_1;pwd=ejc7i6uu64;data source=metin2helper.mssql.somee.com;persist security info=False;initial catalog=metin2helper;TrustServerCertificate=True");
@@ -27,10 +28,19 @@ namespace M2Helper.Data
             modelBuilder.Entity<Sale>().ToTable("Sales");
             modelBuilder.Entity<WeeklyEvent>().ToTable("weekly_events");
             modelBuilder.Entity<RazadorCooldown>().ToTable("Razador_Cooldown");
+            modelBuilder.Entity<Key>().ToTable("Keys");
+            modelBuilder.Entity<Users>().ToTable("Users");
 
             modelBuilder.Entity<WeeklyEvent>()
                 .HasKey(e => e.event_id)
                 .HasName("PK_weekly_events");
+            modelBuilder.Entity<Users>()
+                .HasKey(e => e.UserId)
+                .HasName("PK_weekly_events");
+            modelBuilder.Entity<KilledRazador>()
+            .HasOne(k => k.User)
+            .WithMany(u => u.KilledRazadors)
+            .HasForeignKey(k => k.UserId);
         }
     }
 }

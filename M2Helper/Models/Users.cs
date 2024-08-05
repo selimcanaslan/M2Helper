@@ -27,5 +27,6 @@ namespace M2Helper.Models
         [StringLength(255)]
         public string ActiveKey { get; set; }
         public ICollection<KilledRazador> KilledRazadors { get; set; }
+        public ICollection<Cooldowns> Cooldowns { get; set; }
     }
 }

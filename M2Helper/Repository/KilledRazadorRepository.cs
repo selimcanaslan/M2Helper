@@ -12,8 +12,14 @@ using System.Globalization;
 
 namespace M2Helper.Repository
 {
+
     public class KilledRazadorRepository
     {
+        public CooldownsRepository cooldownsRepository;
+        public KilledRazadorRepository()
+        {
+            cooldownsRepository = new CooldownsRepository();
+        }
         public async void AddKilledRazadorRecord(KilledRazador killedRazador)
         {
 

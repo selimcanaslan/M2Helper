@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             totalChestCountAndAvgLabel = new Label();
             totalSessionCountLabel = new Label();
@@ -154,9 +154,9 @@
             day1TotalAvgChestLabel.ForeColor = Color.White;
             day1TotalAvgChestLabel.Location = new Point(264, 80);
             day1TotalAvgChestLabel.Name = "day1TotalAvgChestLabel";
-            day1TotalAvgChestLabel.Size = new Size(37, 15);
+            day1TotalAvgChestLabel.Size = new Size(31, 15);
             day1TotalAvgChestLabel.TabIndex = 24;
-            day1TotalAvgChestLabel.Text = "label1";
+            day1TotalAvgChestLabel.Text = "NaN";
             // 
             // day2TotalAvgChestLabel
             // 
@@ -165,9 +165,9 @@
             day2TotalAvgChestLabel.ForeColor = Color.White;
             day2TotalAvgChestLabel.Location = new Point(264, 107);
             day2TotalAvgChestLabel.Name = "day2TotalAvgChestLabel";
-            day2TotalAvgChestLabel.Size = new Size(37, 15);
+            day2TotalAvgChestLabel.Size = new Size(31, 15);
             day2TotalAvgChestLabel.TabIndex = 23;
-            day2TotalAvgChestLabel.Text = "label1";
+            day2TotalAvgChestLabel.Text = "NaN";
             // 
             // day3TotalAvgChestLabel
             // 
@@ -176,9 +176,9 @@
             day3TotalAvgChestLabel.ForeColor = Color.White;
             day3TotalAvgChestLabel.Location = new Point(264, 138);
             day3TotalAvgChestLabel.Name = "day3TotalAvgChestLabel";
-            day3TotalAvgChestLabel.Size = new Size(37, 15);
+            day3TotalAvgChestLabel.Size = new Size(31, 15);
             day3TotalAvgChestLabel.TabIndex = 22;
-            day3TotalAvgChestLabel.Text = "label1";
+            day3TotalAvgChestLabel.Text = "NaN";
             // 
             // day4TotalAvgChestLabel
             // 
@@ -187,9 +187,9 @@
             day4TotalAvgChestLabel.ForeColor = Color.White;
             day4TotalAvgChestLabel.Location = new Point(264, 166);
             day4TotalAvgChestLabel.Name = "day4TotalAvgChestLabel";
-            day4TotalAvgChestLabel.Size = new Size(37, 15);
+            day4TotalAvgChestLabel.Size = new Size(31, 15);
             day4TotalAvgChestLabel.TabIndex = 21;
-            day4TotalAvgChestLabel.Text = "label1";
+            day4TotalAvgChestLabel.Text = "NaN";
             // 
             // day5TotalAvgChestLabel
             // 
@@ -198,9 +198,9 @@
             day5TotalAvgChestLabel.ForeColor = Color.White;
             day5TotalAvgChestLabel.Location = new Point(264, 197);
             day5TotalAvgChestLabel.Name = "day5TotalAvgChestLabel";
-            day5TotalAvgChestLabel.Size = new Size(37, 15);
+            day5TotalAvgChestLabel.Size = new Size(31, 15);
             day5TotalAvgChestLabel.TabIndex = 20;
-            day5TotalAvgChestLabel.Text = "label1";
+            day5TotalAvgChestLabel.Text = "NaN";
             // 
             // day6TotalAvgChestLabel
             // 
@@ -209,9 +209,9 @@
             day6TotalAvgChestLabel.ForeColor = Color.White;
             day6TotalAvgChestLabel.Location = new Point(264, 228);
             day6TotalAvgChestLabel.Name = "day6TotalAvgChestLabel";
-            day6TotalAvgChestLabel.Size = new Size(37, 15);
+            day6TotalAvgChestLabel.Size = new Size(31, 15);
             day6TotalAvgChestLabel.TabIndex = 19;
-            day6TotalAvgChestLabel.Text = "label1";
+            day6TotalAvgChestLabel.Text = "NaN";
             // 
             // day7TotalAvgChestLabel
             // 
@@ -220,9 +220,9 @@
             day7TotalAvgChestLabel.ForeColor = Color.White;
             day7TotalAvgChestLabel.Location = new Point(264, 259);
             day7TotalAvgChestLabel.Name = "day7TotalAvgChestLabel";
-            day7TotalAvgChestLabel.Size = new Size(37, 15);
+            day7TotalAvgChestLabel.Size = new Size(31, 15);
             day7TotalAvgChestLabel.TabIndex = 18;
-            day7TotalAvgChestLabel.Text = "label1";
+            day7TotalAvgChestLabel.Text = "NaN";
             // 
             // label1
             // 
@@ -242,9 +242,9 @@
             day1SessionCountLabel.ForeColor = Color.White;
             day1SessionCountLabel.Location = new Point(109, 80);
             day1SessionCountLabel.Name = "day1SessionCountLabel";
-            day1SessionCountLabel.Size = new Size(37, 15);
+            day1SessionCountLabel.Size = new Size(31, 15);
             day1SessionCountLabel.TabIndex = 16;
-            day1SessionCountLabel.Text = "label1";
+            day1SessionCountLabel.Text = "NaN";
             // 
             // day2SessionCountLabel
             // 
@@ -253,9 +253,9 @@
             day2SessionCountLabel.ForeColor = Color.White;
             day2SessionCountLabel.Location = new Point(109, 107);
             day2SessionCountLabel.Name = "day2SessionCountLabel";
-            day2SessionCountLabel.Size = new Size(37, 15);
+            day2SessionCountLabel.Size = new Size(31, 15);
             day2SessionCountLabel.TabIndex = 15;
-            day2SessionCountLabel.Text = "label1";
+            day2SessionCountLabel.Text = "NaN";
             // 
             // day3SessionCountLabel
             // 
@@ -264,9 +264,9 @@
             day3SessionCountLabel.ForeColor = Color.White;
             day3SessionCountLabel.Location = new Point(109, 138);
             day3SessionCountLabel.Name = "day3SessionCountLabel";
-            day3SessionCountLabel.Size = new Size(37, 15);
+            day3SessionCountLabel.Size = new Size(31, 15);
             day3SessionCountLabel.TabIndex = 14;
-            day3SessionCountLabel.Text = "label1";
+            day3SessionCountLabel.Text = "NaN";
             // 
             // day4SessionCountLabel
             // 
@@ -275,9 +275,9 @@
             day4SessionCountLabel.ForeColor = Color.White;
             day4SessionCountLabel.Location = new Point(109, 166);
             day4SessionCountLabel.Name = "day4SessionCountLabel";
-            day4SessionCountLabel.Size = new Size(37, 15);
+            day4SessionCountLabel.Size = new Size(31, 15);
             day4SessionCountLabel.TabIndex = 13;
-            day4SessionCountLabel.Text = "label1";
+            day4SessionCountLabel.Text = "NaN";
             // 
             // day5SessionCountLabel
             // 
@@ -286,9 +286,9 @@
             day5SessionCountLabel.ForeColor = Color.White;
             day5SessionCountLabel.Location = new Point(109, 197);
             day5SessionCountLabel.Name = "day5SessionCountLabel";
-            day5SessionCountLabel.Size = new Size(37, 15);
+            day5SessionCountLabel.Size = new Size(31, 15);
             day5SessionCountLabel.TabIndex = 12;
-            day5SessionCountLabel.Text = "label1";
+            day5SessionCountLabel.Text = "NaN";
             // 
             // day6SessionCountLabel
             // 
@@ -297,9 +297,9 @@
             day6SessionCountLabel.ForeColor = Color.White;
             day6SessionCountLabel.Location = new Point(109, 228);
             day6SessionCountLabel.Name = "day6SessionCountLabel";
-            day6SessionCountLabel.Size = new Size(37, 15);
+            day6SessionCountLabel.Size = new Size(31, 15);
             day6SessionCountLabel.TabIndex = 11;
-            day6SessionCountLabel.Text = "label1";
+            day6SessionCountLabel.Text = "NaN";
             // 
             // day7SessionCountLabel
             // 
@@ -308,9 +308,9 @@
             day7SessionCountLabel.ForeColor = Color.White;
             day7SessionCountLabel.Location = new Point(109, 259);
             day7SessionCountLabel.Name = "day7SessionCountLabel";
-            day7SessionCountLabel.Size = new Size(37, 15);
+            day7SessionCountLabel.Size = new Size(31, 15);
             day7SessionCountLabel.TabIndex = 10;
-            day7SessionCountLabel.Text = "label1";
+            day7SessionCountLabel.Text = "NaN";
             // 
             // sessionCountLabel
             // 
@@ -330,9 +330,9 @@
             day1DateLabel.ForeColor = Color.White;
             day1DateLabel.Location = new Point(15, 80);
             day1DateLabel.Name = "day1DateLabel";
-            day1DateLabel.Size = new Size(37, 15);
+            day1DateLabel.Size = new Size(31, 15);
             day1DateLabel.TabIndex = 8;
-            day1DateLabel.Text = "label1";
+            day1DateLabel.Text = "NaN";
             // 
             // day2DateLabel
             // 
@@ -341,9 +341,9 @@
             day2DateLabel.ForeColor = Color.White;
             day2DateLabel.Location = new Point(15, 107);
             day2DateLabel.Name = "day2DateLabel";
-            day2DateLabel.Size = new Size(37, 15);
+            day2DateLabel.Size = new Size(31, 15);
             day2DateLabel.TabIndex = 7;
-            day2DateLabel.Text = "label1";
+            day2DateLabel.Text = "NaN";
             // 
             // day3DateLabel
             // 
@@ -352,9 +352,9 @@
             day3DateLabel.ForeColor = Color.White;
             day3DateLabel.Location = new Point(15, 138);
             day3DateLabel.Name = "day3DateLabel";
-            day3DateLabel.Size = new Size(37, 15);
+            day3DateLabel.Size = new Size(31, 15);
             day3DateLabel.TabIndex = 6;
-            day3DateLabel.Text = "label1";
+            day3DateLabel.Text = "NaN";
             // 
             // day4DateLabel
             // 
@@ -363,9 +363,9 @@
             day4DateLabel.ForeColor = Color.White;
             day4DateLabel.Location = new Point(15, 166);
             day4DateLabel.Name = "day4DateLabel";
-            day4DateLabel.Size = new Size(37, 15);
+            day4DateLabel.Size = new Size(31, 15);
             day4DateLabel.TabIndex = 5;
-            day4DateLabel.Text = "label1";
+            day4DateLabel.Text = "NaN";
             // 
             // day5DateLabel
             // 
@@ -374,9 +374,9 @@
             day5DateLabel.ForeColor = Color.White;
             day5DateLabel.Location = new Point(15, 197);
             day5DateLabel.Name = "day5DateLabel";
-            day5DateLabel.Size = new Size(37, 15);
+            day5DateLabel.Size = new Size(31, 15);
             day5DateLabel.TabIndex = 4;
-            day5DateLabel.Text = "label1";
+            day5DateLabel.Text = "NaN";
             // 
             // day6DateLabel
             // 
@@ -385,9 +385,9 @@
             day6DateLabel.ForeColor = Color.White;
             day6DateLabel.Location = new Point(15, 228);
             day6DateLabel.Name = "day6DateLabel";
-            day6DateLabel.Size = new Size(37, 15);
+            day6DateLabel.Size = new Size(31, 15);
             day6DateLabel.TabIndex = 3;
-            day6DateLabel.Text = "label1";
+            day6DateLabel.Text = "NaN";
             // 
             // day7DateLabel
             // 
@@ -396,9 +396,9 @@
             day7DateLabel.ForeColor = Color.White;
             day7DateLabel.Location = new Point(15, 259);
             day7DateLabel.Name = "day7DateLabel";
-            day7DateLabel.Size = new Size(37, 15);
+            day7DateLabel.Size = new Size(31, 15);
             day7DateLabel.TabIndex = 2;
-            day7DateLabel.Text = "label1";
+            day7DateLabel.Text = "NaN";
             // 
             // dateLabel
             // 
@@ -414,12 +414,12 @@
             // exitButton
             // 
             exitButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            exitButton.CustomizableEdges = customizableEdges1;
+            exitButton.CustomizableEdges = customizableEdges3;
             exitButton.FillColor = Color.FromArgb(77, 77, 77);
             exitButton.IconColor = Color.White;
             exitButton.Location = new Point(644, 3);
             exitButton.Name = "exitButton";
-            exitButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            exitButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             exitButton.Size = new Size(45, 29);
             exitButton.TabIndex = 0;
             // 

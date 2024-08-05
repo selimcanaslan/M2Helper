@@ -16,10 +16,23 @@ namespace M2Helper.Views
     public partial class LoginWindow : Form
     {
         UsersService usersService;
+        public static bool developerMode = false;
         public LoginWindow()
         {
             usersService = new UsersService();
             InitializeComponent();
+            if (developerMode)
+            {
+                GetAdminUser();
+            }
+        }
+
+        private async void GetAdminUser()
+        {
+            Users admin = new Users();
+            admin = await usersService.GetUserByIdAsync(1);
+            mailTextBox.Text = admin.UserMailAddress;
+            passwordTextBox.Text = "seloselo1";
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -34,7 +47,8 @@ namespace M2Helper.Views
             Users user = await usersService.GetUserByEmailAsync(userMail);
             if (user != null)
             {
-                if (user.UserPassword == HashPassword(passwordTextBox.Text)){
+                if (user.UserPassword == HashPassword(passwordTextBox.Text))
+                {
                     MainWindow mainWindow = new MainWindow(user);
                     this.Hide();
                     mainWindow.Closed += (s, args) => this.Close();

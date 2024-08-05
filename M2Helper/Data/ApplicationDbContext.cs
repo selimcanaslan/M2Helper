@@ -15,7 +15,7 @@ namespace M2Helper.Data
         public DbSet<KilledRazador> KilledRazadors { get; set; }
         public DbSet<Sale> Sales { get; set; }
         public DbSet<WeeklyEvent> WeeklyEvents { get; set; }
-        public DbSet<RazadorCooldown> RazadorCooldowns { get; set; }
+        public DbSet<Cooldowns> Cooldowns { get; set; }
         public DbSet<Key> Keys { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,7 +27,7 @@ namespace M2Helper.Data
             modelBuilder.Entity<KilledRazador>().ToTable("Killed_Razador_List");
             modelBuilder.Entity<Sale>().ToTable("Sales");
             modelBuilder.Entity<WeeklyEvent>().ToTable("weekly_events");
-            modelBuilder.Entity<RazadorCooldown>().ToTable("Razador_Cooldown");
+            modelBuilder.Entity<Cooldowns>().ToTable("Cooldowns");
             modelBuilder.Entity<Key>().ToTable("Keys");
             modelBuilder.Entity<Users>().ToTable("Users");
 
@@ -37,10 +37,17 @@ namespace M2Helper.Data
             modelBuilder.Entity<Users>()
                 .HasKey(e => e.UserId)
                 .HasName("PK_weekly_events");
+            modelBuilder.Entity<Cooldowns>()
+                .HasKey(e => e.id)
+                .HasName("PK_Cooldowns");
             modelBuilder.Entity<KilledRazador>()
             .HasOne(k => k.User)
             .WithMany(u => u.KilledRazadors)
             .HasForeignKey(k => k.UserId);
+            modelBuilder.Entity<Cooldowns>()
+            .HasOne(k => k.User)
+            .WithMany(u => u.Cooldowns)
+            .HasForeignKey(k => k.userId);
         }
     }
 }

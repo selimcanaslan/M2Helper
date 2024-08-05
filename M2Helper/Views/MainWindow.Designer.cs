@@ -52,13 +52,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -73,6 +73,29 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             draggableTopPanel = new Panel();
             controllersPanel = new Panel();
             minimizeButton = new Guna.UI2.WinForms.Guna2Button();
@@ -84,6 +107,7 @@
             topPanelDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             windowTitleDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             containerPanel = new Panel();
+            bossManageComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             cooldownsPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             biologJustSubmitButton = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
@@ -103,6 +127,7 @@
             guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             cooldownTextLabel = new Label();
             eventPanel = new Panel();
+            languageChangeButton = new Guna.UI2.WinForms.Guna2Button();
             cooldownsButton = new Guna.UI2.WinForms.Guna2ImageButton();
             corTrackingButton = new Guna.UI2.WinForms.Guna2Button();
             guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -125,6 +150,23 @@
             allTimeRecordsLabel = new Label();
             razadorSessionManagerTextLabel = new Label();
             todaysRecordsLabel = new Label();
+            nemereSessionManagerPanel = new Panel();
+            guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
+            label3 = new Label();
+            label1 = new Label();
+            label2 = new Label();
+            guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            label4 = new Label();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             applicationStartLoadingScreen = new Panel();
             m2HelperLabel = new Label();
             loadingLabel = new Label();
@@ -149,6 +191,12 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
+            nemereSessionManagerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox8).BeginInit();
             applicationStartLoadingScreen.SuspendLayout();
             SuspendLayout();
             // 
@@ -274,10 +322,12 @@
             // containerPanel
             // 
             containerPanel.BackColor = Color.FromArgb(55, 55, 55);
+            containerPanel.Controls.Add(bossManageComboBox);
             containerPanel.Controls.Add(cooldownsPanel);
             containerPanel.Controls.Add(eventPanel);
             containerPanel.Controls.Add(killedRazadorsDGV);
             containerPanel.Controls.Add(razadorSessionManagerPanel);
+            containerPanel.Controls.Add(nemereSessionManagerPanel);
             containerPanel.Controls.Add(applicationStartLoadingScreen);
             containerPanel.Dock = DockStyle.Fill;
             containerPanel.Location = new Point(1, 41);
@@ -285,6 +335,27 @@
             containerPanel.Name = "containerPanel";
             containerPanel.Size = new Size(931, 420);
             containerPanel.TabIndex = 2;
+            // 
+            // bossManageComboBox
+            // 
+            bossManageComboBox.BackColor = Color.Transparent;
+            bossManageComboBox.BorderColor = Color.Gray;
+            bossManageComboBox.CustomizableEdges = customizableEdges9;
+            bossManageComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            bossManageComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            bossManageComboBox.FillColor = Color.FromArgb(46, 46, 46);
+            bossManageComboBox.FocusedColor = Color.Empty;
+            bossManageComboBox.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bossManageComboBox.ForeColor = Color.White;
+            bossManageComboBox.ItemHeight = 20;
+            bossManageComboBox.Items.AddRange(new object[] { "Razador Session Manager", "Nemere Session Manager" });
+            bossManageComboBox.Location = new Point(7, 2);
+            bossManageComboBox.Name = "bossManageComboBox";
+            bossManageComboBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            bossManageComboBox.Size = new Size(374, 26);
+            bossManageComboBox.StartIndex = 0;
+            bossManageComboBox.TabIndex = 2;
+            bossManageComboBox.SelectedIndexChanged += bossManageComboBox_SelectedIndexChanged;
             // 
             // cooldownsPanel
             // 
@@ -317,7 +388,7 @@
             // 
             // biologJustSubmitButton
             // 
-            biologJustSubmitButton.CustomizableEdges = customizableEdges9;
+            biologJustSubmitButton.CustomizableEdges = customizableEdges11;
             biologJustSubmitButton.DisabledState.BorderColor = Color.DarkGray;
             biologJustSubmitButton.DisabledState.CustomBorderColor = Color.DarkGray;
             biologJustSubmitButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -326,7 +397,7 @@
             biologJustSubmitButton.ForeColor = Color.White;
             biologJustSubmitButton.Location = new Point(232, 45);
             biologJustSubmitButton.Name = "biologJustSubmitButton";
-            biologJustSubmitButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            biologJustSubmitButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             biologJustSubmitButton.Size = new Size(99, 19);
             biologJustSubmitButton.TabIndex = 21;
             biologJustSubmitButton.Text = "Just Submit ?";
@@ -352,7 +423,7 @@
             biologEditButton.Location = new Point(10, 45);
             biologEditButton.Name = "biologEditButton";
             biologEditButton.PressedState.ImageSize = new Size(64, 64);
-            biologEditButton.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            biologEditButton.ShadowDecoration.CustomizableEdges = customizableEdges13;
             biologEditButton.Size = new Size(19, 19);
             biologEditButton.TabIndex = 19;
             biologEditButton.Click += biologEditButton_Click;
@@ -369,7 +440,7 @@
             costumeHelmetEditButton.Location = new Point(10, 70);
             costumeHelmetEditButton.Name = "costumeHelmetEditButton";
             costumeHelmetEditButton.PressedState.ImageSize = new Size(64, 64);
-            costumeHelmetEditButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            costumeHelmetEditButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
             costumeHelmetEditButton.Size = new Size(19, 19);
             costumeHelmetEditButton.TabIndex = 18;
             costumeHelmetEditButton.Click += costumeHelmetEditButton_Click;
@@ -386,7 +457,7 @@
             costumeArmorEditButton.Location = new Point(10, 95);
             costumeArmorEditButton.Name = "costumeArmorEditButton";
             costumeArmorEditButton.PressedState.ImageSize = new Size(64, 64);
-            costumeArmorEditButton.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            costumeArmorEditButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
             costumeArmorEditButton.Size = new Size(19, 19);
             costumeArmorEditButton.TabIndex = 17;
             costumeArmorEditButton.Click += costumeArmorEditButton_Click;
@@ -403,7 +474,7 @@
             costumeWeaponEditButton.Location = new Point(10, 120);
             costumeWeaponEditButton.Name = "costumeWeaponEditButton";
             costumeWeaponEditButton.PressedState.ImageSize = new Size(64, 64);
-            costumeWeaponEditButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            costumeWeaponEditButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
             costumeWeaponEditButton.Size = new Size(19, 19);
             costumeWeaponEditButton.TabIndex = 16;
             costumeWeaponEditButton.Click += costumeWeaponEditButton_Click;
@@ -498,12 +569,12 @@
             // 
             // guna2PictureBox7
             // 
-            guna2PictureBox7.CustomizableEdges = customizableEdges15;
+            guna2PictureBox7.CustomizableEdges = customizableEdges17;
             guna2PictureBox7.Image = Properties.Resources.hourglassgif;
             guna2PictureBox7.ImageRotate = 0F;
             guna2PictureBox7.Location = new Point(303, 2);
             guna2PictureBox7.Name = "guna2PictureBox7";
-            guna2PictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2PictureBox7.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2PictureBox7.Size = new Size(36, 42);
             guna2PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox7.TabIndex = 2;
@@ -511,12 +582,12 @@
             // 
             // guna2PictureBox5
             // 
-            guna2PictureBox5.CustomizableEdges = customizableEdges17;
+            guna2PictureBox5.CustomizableEdges = customizableEdges19;
             guna2PictureBox5.Image = Properties.Resources.hourglassgif;
             guna2PictureBox5.ImageRotate = 0F;
             guna2PictureBox5.Location = new Point(3, 3);
             guna2PictureBox5.Name = "guna2PictureBox5";
-            guna2PictureBox5.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2PictureBox5.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox5.Size = new Size(36, 42);
             guna2PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox5.TabIndex = 1;
@@ -536,6 +607,7 @@
             // eventPanel
             // 
             eventPanel.BackColor = Color.FromArgb(46, 46, 46);
+            eventPanel.Controls.Add(languageChangeButton);
             eventPanel.Controls.Add(cooldownsButton);
             eventPanel.Controls.Add(corTrackingButton);
             eventPanel.Controls.Add(guna2PictureBox6);
@@ -544,6 +616,24 @@
             eventPanel.Name = "eventPanel";
             eventPanel.Size = new Size(920, 29);
             eventPanel.TabIndex = 6;
+            // 
+            // languageChangeButton
+            // 
+            languageChangeButton.CustomizableEdges = customizableEdges21;
+            languageChangeButton.DisabledState.BorderColor = Color.DarkGray;
+            languageChangeButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            languageChangeButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            languageChangeButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            languageChangeButton.FillColor = Color.FromArgb(77, 77, 77);
+            languageChangeButton.Font = new Font("Segoe UI", 9F);
+            languageChangeButton.ForeColor = Color.White;
+            languageChangeButton.Location = new Point(736, 4);
+            languageChangeButton.Name = "languageChangeButton";
+            languageChangeButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            languageChangeButton.Size = new Size(42, 21);
+            languageChangeButton.TabIndex = 4;
+            languageChangeButton.Text = "TR";
+            languageChangeButton.Click += languageChangeButton_Click;
             // 
             // cooldownsButton
             // 
@@ -557,7 +647,7 @@
             cooldownsButton.Location = new Point(784, 0);
             cooldownsButton.Name = "cooldownsButton";
             cooldownsButton.PressedState.ImageSize = new Size(64, 64);
-            cooldownsButton.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            cooldownsButton.ShadowDecoration.CustomizableEdges = customizableEdges23;
             cooldownsButton.Size = new Size(24, 28);
             cooldownsButton.TabIndex = 3;
             cooldownsButton.Click += cooldownsButton_Click;
@@ -565,7 +655,7 @@
             // corTrackingButton
             // 
             corTrackingButton.Cursor = Cursors.Hand;
-            corTrackingButton.CustomizableEdges = customizableEdges20;
+            corTrackingButton.CustomizableEdges = customizableEdges24;
             corTrackingButton.DisabledState.BorderColor = Color.DarkGray;
             corTrackingButton.DisabledState.CustomBorderColor = Color.DarkGray;
             corTrackingButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -577,7 +667,7 @@
             corTrackingButton.Image = Properties.Resources.Cor_Draconis;
             corTrackingButton.Location = new Point(814, 2);
             corTrackingButton.Name = "corTrackingButton";
-            corTrackingButton.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            corTrackingButton.ShadowDecoration.CustomizableEdges = customizableEdges25;
             corTrackingButton.Size = new Size(104, 25);
             corTrackingButton.TabIndex = 2;
             corTrackingButton.Text = "Cor Tracking";
@@ -585,12 +675,12 @@
             // 
             // guna2PictureBox6
             // 
-            guna2PictureBox6.CustomizableEdges = customizableEdges22;
+            guna2PictureBox6.CustomizableEdges = customizableEdges26;
             guna2PictureBox6.Image = Properties.Resources.greendot;
             guna2PictureBox6.ImageRotate = 0F;
             guna2PictureBox6.Location = new Point(6, 7);
             guna2PictureBox6.Name = "guna2PictureBox6";
-            guna2PictureBox6.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            guna2PictureBox6.ShadowDecoration.CustomizableEdges = customizableEdges27;
             guna2PictureBox6.Size = new Size(16, 16);
             guna2PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox6.TabIndex = 2;
@@ -636,7 +726,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             killedRazadorsDGV.DefaultCellStyle = dataGridViewCellStyle3;
             killedRazadorsDGV.GridColor = Color.FromArgb(231, 229, 255);
-            killedRazadorsDGV.Location = new Point(7, 225);
+            killedRazadorsDGV.Location = new Point(7, 251);
             killedRazadorsDGV.Margin = new Padding(4, 3, 4, 3);
             killedRazadorsDGV.MultiSelect = false;
             killedRazadorsDGV.Name = "killedRazadorsDGV";
@@ -644,7 +734,7 @@
             killedRazadorsDGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             killedRazadorsDGV.RowHeadersVisible = false;
             killedRazadorsDGV.RowTemplate.Height = 22;
-            killedRazadorsDGV.Size = new Size(374, 155);
+            killedRazadorsDGV.Size = new Size(374, 129);
             killedRazadorsDGV.TabIndex = 5;
             killedRazadorsDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             killedRazadorsDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -689,7 +779,7 @@
             razadorSessionManagerPanel.Controls.Add(allTimeRecordsLabel);
             razadorSessionManagerPanel.Controls.Add(razadorSessionManagerTextLabel);
             razadorSessionManagerPanel.Controls.Add(todaysRecordsLabel);
-            razadorSessionManagerPanel.Location = new Point(7, 7);
+            razadorSessionManagerPanel.Location = new Point(7, 30);
             razadorSessionManagerPanel.Margin = new Padding(4, 3, 4, 3);
             razadorSessionManagerPanel.Name = "razadorSessionManagerPanel";
             razadorSessionManagerPanel.Size = new Size(374, 215);
@@ -721,12 +811,12 @@
             // 
             // razadorPicture
             // 
-            razadorPicture.CustomizableEdges = customizableEdges24;
+            razadorPicture.CustomizableEdges = customizableEdges28;
             razadorPicture.Image = Properties.Resources.Razador;
             razadorPicture.ImageRotate = 0F;
             razadorPicture.Location = new Point(249, 67);
             razadorPicture.Name = "razadorPicture";
-            razadorPicture.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            razadorPicture.ShadowDecoration.CustomizableEdges = customizableEdges29;
             razadorPicture.Size = new Size(119, 102);
             razadorPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             razadorPicture.TabIndex = 11;
@@ -747,7 +837,7 @@
             // razadorWeeklyAnalysisButton
             // 
             razadorWeeklyAnalysisButton.Cursor = Cursors.Hand;
-            razadorWeeklyAnalysisButton.CustomizableEdges = customizableEdges26;
+            razadorWeeklyAnalysisButton.CustomizableEdges = customizableEdges30;
             razadorWeeklyAnalysisButton.DisabledState.BorderColor = Color.DarkGray;
             razadorWeeklyAnalysisButton.DisabledState.CustomBorderColor = Color.DarkGray;
             razadorWeeklyAnalysisButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -759,7 +849,7 @@
             razadorWeeklyAnalysisButton.ImageAlign = HorizontalAlignment.Left;
             razadorWeeklyAnalysisButton.Location = new Point(249, 175);
             razadorWeeklyAnalysisButton.Name = "razadorWeeklyAnalysisButton";
-            razadorWeeklyAnalysisButton.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            razadorWeeklyAnalysisButton.ShadowDecoration.CustomizableEdges = customizableEdges31;
             razadorWeeklyAnalysisButton.Size = new Size(119, 34);
             razadorWeeklyAnalysisButton.TabIndex = 3;
             razadorWeeklyAnalysisButton.Text = "Last 7 Day's Analysis";
@@ -769,7 +859,7 @@
             // removeRazadorCooldownButton
             // 
             removeRazadorCooldownButton.Cursor = Cursors.Hand;
-            removeRazadorCooldownButton.CustomizableEdges = customizableEdges28;
+            removeRazadorCooldownButton.CustomizableEdges = customizableEdges32;
             removeRazadorCooldownButton.DisabledState.BorderColor = Color.DarkGray;
             removeRazadorCooldownButton.DisabledState.CustomBorderColor = Color.DarkGray;
             removeRazadorCooldownButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -779,7 +869,7 @@
             removeRazadorCooldownButton.ForeColor = Color.White;
             removeRazadorCooldownButton.Location = new Point(135, 175);
             removeRazadorCooldownButton.Name = "removeRazadorCooldownButton";
-            removeRazadorCooldownButton.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            removeRazadorCooldownButton.ShadowDecoration.CustomizableEdges = customizableEdges33;
             removeRazadorCooldownButton.Size = new Size(108, 34);
             removeRazadorCooldownButton.TabIndex = 2;
             removeRazadorCooldownButton.Text = "Remove Razador CD";
@@ -788,12 +878,12 @@
             // guna2PictureBox4
             // 
             guna2PictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox4.CustomizableEdges = customizableEdges30;
+            guna2PictureBox4.CustomizableEdges = customizableEdges34;
             guna2PictureBox4.Image = Properties.Resources.dot;
             guna2PictureBox4.ImageRotate = 0F;
             guna2PictureBox4.Location = new Point(8, 83);
             guna2PictureBox4.Name = "guna2PictureBox4";
-            guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges31;
+            guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges35;
             guna2PictureBox4.Size = new Size(21, 19);
             guna2PictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox4.TabIndex = 9;
@@ -814,12 +904,12 @@
             // guna2PictureBox3
             // 
             guna2PictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox3.CustomizableEdges = customizableEdges32;
+            guna2PictureBox3.CustomizableEdges = customizableEdges36;
             guna2PictureBox3.Image = Properties.Resources.dot;
             guna2PictureBox3.ImageRotate = 0F;
             guna2PictureBox3.Location = new Point(8, 26);
             guna2PictureBox3.Name = "guna2PictureBox3";
-            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges33;
+            guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges37;
             guna2PictureBox3.Size = new Size(21, 19);
             guna2PictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox3.TabIndex = 8;
@@ -828,12 +918,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox1.CustomizableEdges = customizableEdges34;
+            guna2PictureBox1.CustomizableEdges = customizableEdges38;
             guna2PictureBox1.Image = Properties.Resources.dot;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(8, 45);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges39;
             guna2PictureBox1.Size = new Size(21, 19);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox1.TabIndex = 3;
@@ -842,7 +932,7 @@
             // stopRazadorSessionButton
             // 
             stopRazadorSessionButton.Cursor = Cursors.Hand;
-            stopRazadorSessionButton.CustomizableEdges = customizableEdges36;
+            stopRazadorSessionButton.CustomizableEdges = customizableEdges40;
             stopRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             stopRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -853,7 +943,7 @@
             stopRazadorSessionButton.Location = new Point(74, 175);
             stopRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             stopRazadorSessionButton.Name = "stopRazadorSessionButton";
-            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges37;
+            stopRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges41;
             stopRazadorSessionButton.Size = new Size(54, 34);
             stopRazadorSessionButton.TabIndex = 1;
             stopRazadorSessionButton.Text = "Stop";
@@ -862,7 +952,7 @@
             // startRazadorSessionButton
             // 
             startRazadorSessionButton.Cursor = Cursors.Hand;
-            startRazadorSessionButton.CustomizableEdges = customizableEdges38;
+            startRazadorSessionButton.CustomizableEdges = customizableEdges42;
             startRazadorSessionButton.DisabledState.BorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.CustomBorderColor = Color.DarkGray;
             startRazadorSessionButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -873,7 +963,7 @@
             startRazadorSessionButton.Location = new Point(7, 175);
             startRazadorSessionButton.Margin = new Padding(4, 3, 4, 3);
             startRazadorSessionButton.Name = "startRazadorSessionButton";
-            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            startRazadorSessionButton.ShadowDecoration.CustomizableEdges = customizableEdges43;
             startRazadorSessionButton.Size = new Size(59, 34);
             startRazadorSessionButton.TabIndex = 0;
             startRazadorSessionButton.Text = "Start";
@@ -882,12 +972,12 @@
             // guna2PictureBox2
             // 
             guna2PictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2PictureBox2.CustomizableEdges = customizableEdges40;
+            guna2PictureBox2.CustomizableEdges = customizableEdges44;
             guna2PictureBox2.Image = Properties.Resources.dot;
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new Point(8, 64);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges45;
             guna2PictureBox2.Size = new Size(21, 19);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox2.TabIndex = 7;
@@ -912,7 +1002,7 @@
             razadorSessionManagerTextLabel.Location = new Point(7, 2);
             razadorSessionManagerTextLabel.Margin = new Padding(4, 0, 4, 0);
             razadorSessionManagerTextLabel.Name = "razadorSessionManagerTextLabel";
-            razadorSessionManagerTextLabel.Size = new Size(166, 24);
+            razadorSessionManagerTextLabel.Size = new Size(361, 24);
             razadorSessionManagerTextLabel.TabIndex = 3;
             razadorSessionManagerTextLabel.Text = "Razador Session Manager";
             // 
@@ -927,6 +1017,261 @@
             todaysRecordsLabel.Size = new Size(273, 19);
             todaysRecordsLabel.TabIndex = 6;
             todaysRecordsLabel.Text = "Today's Total : 0 Entrance, 0 Chests, 0 AVG";
+            // 
+            // nemereSessionManagerPanel
+            // 
+            nemereSessionManagerPanel.BackColor = Color.FromArgb(46, 46, 46);
+            nemereSessionManagerPanel.BorderStyle = BorderStyle.FixedSingle;
+            nemereSessionManagerPanel.Controls.Add(guna2PictureBox12);
+            nemereSessionManagerPanel.Controls.Add(guna2PictureBox9);
+            nemereSessionManagerPanel.Controls.Add(guna2PictureBox10);
+            nemereSessionManagerPanel.Controls.Add(guna2PictureBox11);
+            nemereSessionManagerPanel.Controls.Add(label3);
+            nemereSessionManagerPanel.Controls.Add(label1);
+            nemereSessionManagerPanel.Controls.Add(label2);
+            nemereSessionManagerPanel.Controls.Add(guna2PictureBox8);
+            nemereSessionManagerPanel.Controls.Add(guna2Button1);
+            nemereSessionManagerPanel.Controls.Add(guna2GradientButton1);
+            nemereSessionManagerPanel.Controls.Add(label4);
+            nemereSessionManagerPanel.Controls.Add(guna2Button2);
+            nemereSessionManagerPanel.Controls.Add(guna2Button3);
+            nemereSessionManagerPanel.Controls.Add(label5);
+            nemereSessionManagerPanel.Controls.Add(label6);
+            nemereSessionManagerPanel.Controls.Add(label7);
+            nemereSessionManagerPanel.Location = new Point(7, 30);
+            nemereSessionManagerPanel.Margin = new Padding(4, 3, 4, 3);
+            nemereSessionManagerPanel.Name = "nemereSessionManagerPanel";
+            nemereSessionManagerPanel.Size = new Size(374, 215);
+            nemereSessionManagerPanel.TabIndex = 8;
+            // 
+            // guna2PictureBox12
+            // 
+            guna2PictureBox12.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox12.CustomizableEdges = customizableEdges46;
+            guna2PictureBox12.Image = Properties.Resources.dot;
+            guna2PictureBox12.ImageRotate = 0F;
+            guna2PictureBox12.Location = new Point(7, 83);
+            guna2PictureBox12.Name = "guna2PictureBox12";
+            guna2PictureBox12.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            guna2PictureBox12.Size = new Size(21, 19);
+            guna2PictureBox12.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox12.TabIndex = 16;
+            guna2PictureBox12.TabStop = false;
+            // 
+            // guna2PictureBox9
+            // 
+            guna2PictureBox9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox9.CustomizableEdges = customizableEdges48;
+            guna2PictureBox9.Image = Properties.Resources.dot;
+            guna2PictureBox9.ImageRotate = 0F;
+            guna2PictureBox9.Location = new Point(7, 27);
+            guna2PictureBox9.Name = "guna2PictureBox9";
+            guna2PictureBox9.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            guna2PictureBox9.Size = new Size(21, 19);
+            guna2PictureBox9.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox9.TabIndex = 15;
+            guna2PictureBox9.TabStop = false;
+            // 
+            // guna2PictureBox10
+            // 
+            guna2PictureBox10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox10.CustomizableEdges = customizableEdges50;
+            guna2PictureBox10.Image = Properties.Resources.dot;
+            guna2PictureBox10.ImageRotate = 0F;
+            guna2PictureBox10.Location = new Point(7, 46);
+            guna2PictureBox10.Name = "guna2PictureBox10";
+            guna2PictureBox10.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            guna2PictureBox10.Size = new Size(21, 19);
+            guna2PictureBox10.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox10.TabIndex = 13;
+            guna2PictureBox10.TabStop = false;
+            // 
+            // guna2PictureBox11
+            // 
+            guna2PictureBox11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2PictureBox11.CustomizableEdges = customizableEdges52;
+            guna2PictureBox11.Image = Properties.Resources.dot;
+            guna2PictureBox11.ImageRotate = 0F;
+            guna2PictureBox11.Location = new Point(7, 65);
+            guna2PictureBox11.Name = "guna2PictureBox11";
+            guna2PictureBox11.ShadowDecoration.CustomizableEdges = customizableEdges53;
+            guna2PictureBox11.Size = new Size(21, 19);
+            guna2PictureBox11.SizeMode = PictureBoxSizeMode.CenterImage;
+            guna2PictureBox11.TabIndex = 14;
+            guna2PictureBox11.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold | FontStyle.Italic);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(54, 129);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(81, 33);
+            label3.TabIndex = 12;
+            label3.Text = "0''";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(33, 64);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(151, 19);
+            label1.TabIndex = 5;
+            label1.Text = "Latest Session Time : 0";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(33, 83);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(163, 19);
+            label2.TabIndex = 8;
+            label2.Text = "Fetching Razador State...";
+            // 
+            // guna2PictureBox8
+            // 
+            guna2PictureBox8.CustomizableEdges = customizableEdges54;
+            guna2PictureBox8.Image = (Image)resources.GetObject("guna2PictureBox8.Image");
+            guna2PictureBox8.ImageRotate = 0F;
+            guna2PictureBox8.Location = new Point(249, 72);
+            guna2PictureBox8.Name = "guna2PictureBox8";
+            guna2PictureBox8.ShadowDecoration.CustomizableEdges = customizableEdges55;
+            guna2PictureBox8.Size = new Size(119, 97);
+            guna2PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox8.TabIndex = 11;
+            guna2PictureBox8.TabStop = false;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.Cursor = Cursors.Hand;
+            guna2Button1.CustomizableEdges = customizableEdges56;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(192, 0, 0);
+            guna2Button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources.razador_chest;
+            guna2Button1.ImageAlign = HorizontalAlignment.Left;
+            guna2Button1.Location = new Point(249, 175);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges57;
+            guna2Button1.Size = new Size(119, 34);
+            guna2Button1.TabIndex = 3;
+            guna2Button1.Text = "Last 7 Day's Analysis";
+            guna2Button1.TextOffset = new Point(10, 0);
+            // 
+            // guna2GradientButton1
+            // 
+            guna2GradientButton1.Cursor = Cursors.Hand;
+            guna2GradientButton1.CustomizableEdges = customizableEdges58;
+            guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray;
+            guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2GradientButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            guna2GradientButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2GradientButton1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton1.ForeColor = Color.White;
+            guna2GradientButton1.Location = new Point(135, 175);
+            guna2GradientButton1.Name = "guna2GradientButton1";
+            guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges59;
+            guna2GradientButton1.Size = new Size(108, 34);
+            guna2GradientButton1.TabIndex = 2;
+            guna2GradientButton1.Text = "Remove Nemere CD";
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Segoe UI Black", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(0, 91);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(135, 80);
+            label4.TabIndex = 4;
+            label4.Text = "0'";
+            label4.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.Cursor = Cursors.Hand;
+            guna2Button2.CustomizableEdges = customizableEdges60;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.Red;
+            guna2Button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(74, 175);
+            guna2Button2.Margin = new Padding(4, 3, 4, 3);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges61;
+            guna2Button2.Size = new Size(54, 34);
+            guna2Button2.TabIndex = 1;
+            guna2Button2.Text = "Stop";
+            // 
+            // guna2Button3
+            // 
+            guna2Button3.Cursor = Cursors.Hand;
+            guna2Button3.CustomizableEdges = customizableEdges62;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.Green;
+            guna2Button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(7, 175);
+            guna2Button3.Margin = new Padding(4, 3, 4, 3);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges63;
+            guna2Button3.Size = new Size(59, 34);
+            guna2Button3.TabIndex = 0;
+            guna2Button3.Text = "Start";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(33, 26);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(223, 19);
+            label5.TabIndex = 7;
+            label5.Text = "Total : 0 Entrance, 0 Chests, 0 AVG";
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Orange;
+            label6.Location = new Point(7, 2);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(361, 24);
+            label6.TabIndex = 3;
+            label6.Text = "Nemere Session Manager";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(33, 45);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(273, 19);
+            label7.TabIndex = 6;
+            label7.Text = "Today's Total : 0 Entrance, 0 Chests, 0 AVG";
             // 
             // applicationStartLoadingScreen
             // 
@@ -1012,6 +1357,13 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
+            nemereSessionManagerPanel.ResumeLayout(false);
+            nemereSessionManagerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox8).EndInit();
             applicationStartLoadingScreen.ResumeLayout(false);
             applicationStartLoadingScreen.PerformLayout();
             ResumeLayout(false);
@@ -1078,6 +1430,25 @@
         private Guna.UI2.WinForms.Guna2Button biologJustSubmitButton;
         private Guna.UI2.WinForms.Guna2Button collapseExpandButton;
         private Panel controllersPanel;
+        private Guna.UI2.WinForms.Guna2Button languageChangeButton;
+        private Panel nemereSessionManagerPanel;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox12;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox11;
+        private Label label3;
+        private Label label1;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox bossManageComboBox;
     }
 }
 

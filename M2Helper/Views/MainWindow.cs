@@ -28,7 +28,7 @@ namespace M2Helper
         private KilledRazadorService killedRazadorService;
         private SaleService saleService;
         private WeeklyEventService weeklyEventService;
-        private RazadorCooldownService razadorCooldownService;
+        private CooldownsService razadorCooldownService;
         private DataTable weeklyEvents = null;
         private int latestRazadorTimeSpent = 0;
         private bool isTimerStarted = false;
@@ -47,6 +47,7 @@ namespace M2Helper
         public static int currentRazadorSessionTime = 0;
         public static bool isLatestRazadorSessionSubmitted;
         public static bool isLatestDeleteActionDoneSuccesfully;
+        public static string currentLanguage = "EN";
         public static Users loggedInUser = new Users();
         public MainWindow(Users user)
         {
@@ -54,7 +55,7 @@ namespace M2Helper
             killedRazadorService = new KilledRazadorService();
             saleService = new SaleService();
             weeklyEventService = new WeeklyEventService();
-            razadorCooldownService = new RazadorCooldownService();
+            razadorCooldownService = new CooldownsService();
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -259,11 +260,11 @@ namespace M2Helper
         {
             razadorCooldownLabel.Text = "Fetching...";
             DataTable cooldown = new DataTable();
-            cooldown = await razadorCooldownService.GetNextRazadorDate();
+            cooldown = await razadorCooldownService.GetCooldownAsDataTableAsync(loggedInUser.UserId);
             if (cooldown.Rows.Count > 0)
             {
                 DateTime now = DateTime.Now;
-                DateTime nextRazadorTime = (DateTime)cooldown.Rows[0]["next_razador_time"];
+                DateTime nextRazadorTime = (DateTime)cooldown.Rows[0]["NextRazadorTime"];
                 TimeSpan difference = nextRazadorTime - now;
                 double differenceInSeconds = difference.TotalSeconds;
                 if (differenceInSeconds > 0)
@@ -297,6 +298,7 @@ namespace M2Helper
             }
             else
             {
+                razadorCooldownLabel.Text = "There is no cooldown record yet!";
                 Console.WriteLine("There is no cooldown record yet!");
             }
         }
@@ -454,7 +456,7 @@ namespace M2Helper
                 currentRazadorSessionTime = 0;
                 startRazadorSessionButton.Enabled = true;
                 SubmitSession(latestRazadorTimeSpent);
-                razadorCooldownService.UpdateNextRazadorTimeAsync(1);
+                razadorCooldownService.AddOrUpdateRazadorCooldown(loggedInUser.UserId);
                 GetRazadorCooldownIfExist();
             }
             else
@@ -528,7 +530,7 @@ namespace M2Helper
 
         private void removeRazadorCooldownButton_Click(object sender, EventArgs e)
         {
-            razadorCooldownService.RemoveRazadorCooldown(1);
+            razadorCooldownService.RemoveCooldown(loggedInUser.UserId);
             RazadorCooldownTimer.Stop();
             RazadorCooldownTimer.Tick -= RazadorCooldownTimer_Tick;
             RazadorCooldownTimer.Dispose();
@@ -611,6 +613,36 @@ namespace M2Helper
             {
                 isMainWindowHiddenByNotifyIcon = true;
                 this.Hide();
+            }
+        }
+
+        private void languageChangeButton_Click(object sender, EventArgs e)
+        {
+            if (currentLanguage == "EN")
+            {
+                currentLanguage = "TR";
+                languageChangeButton.Text = "EN";
+                razadorSessionManagerTextLabel.Text = "Razador Oturum Yöneticisi";
+                corTrackingButton.Text = "Cor Takip";
+            }
+            else
+            {
+                currentLanguage = "EN";
+                languageChangeButton.Text = "TR";
+                razadorSessionManagerTextLabel.Text = "Razador Session Manager";
+                corTrackingButton.Text = "Cor Tracking";
+            }
+        }
+
+        private void bossManageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bossManageComboBox.Text == "Razador Session Manager")
+            {
+                razadorSessionManagerPanel.BringToFront();
+            }
+            else if (bossManageComboBox.Text == "Nemere Session Manager")
+            {
+                nemereSessionManagerPanel.BringToFront();
             }
         }
     }

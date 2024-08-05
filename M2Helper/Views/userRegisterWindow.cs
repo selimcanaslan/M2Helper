@@ -16,9 +16,11 @@ namespace M2Helper.Views
     public partial class userRegisterWindow : Form
     {
         private UsersService usersService;
+        private CooldownsService cooldownsService;
         public userRegisterWindow()
         {
             usersService = new UsersService();
+            cooldownsService = new CooldownsService();
             InitializeComponent();
         }
 
@@ -35,6 +37,8 @@ namespace M2Helper.Views
             user.UserType = "User";
             user.ActiveKey = "No Key";
             await usersService.AddUserAsync(user);
+            Users userForCooldownsCreation = await usersService.GetUserByEmailAsync(mailTextBox.Text);
+            cooldownsService.UserRegistirationCooldownsFirstCreation(userForCooldownsCreation.UserId);
             MessageBox.Show("Registration Successful", "Info");
         }
 

@@ -81,6 +81,7 @@
             // 
             // loginButton
             // 
+            loginButton.Cursor = Cursors.Hand;
             loginButton.CustomizableEdges = customizableEdges3;
             loginButton.DisabledState.BorderColor = Color.DarkGray;
             loginButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -100,6 +101,7 @@
             // 
             // registerButton
             // 
+            registerButton.Cursor = Cursors.Hand;
             registerButton.CustomizableEdges = customizableEdges5;
             registerButton.DisabledState.BorderColor = Color.DarkGray;
             registerButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -193,6 +195,7 @@
             // 
             // LoginWindow
             // 
+            AcceptButton = loginButton;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Orange;
